@@ -25,7 +25,6 @@
     <title>{{pageTitle}}</title>
 
     <link rel="shortcut icon" href="/favicon.ico">
-    <script type='text/javascript'>window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"bi-collector.oneapm.com/static/js/bw-send-411.4.5.js","beaconUrl":"bi-collector.oneapm.com/beacon","licenseKey":"mIb~IVUNu6ZVEefZ","applicationID":2274097};</script>
 
 
     {% block styles %}
@@ -33,13 +32,10 @@
     <!-- build:css(.) /styles/vendor.css -->
     <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/vendors/font-awesome/css/font-awesome.css" />
-
     <!-- endbuild -->
 
     <!-- build:css(.tmp/) /styles/frame-all.css -->
-    <link rel="stylesheet" href="/styles/frame.css" />
-    <link rel="stylesheet" href="/styles/frame1.css" />
-    <link rel="stylesheet" href="/styles/frame2.css" />
+    <!-- <link rel="stylesheet" href="/styles/frame.css" /> -->
     <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link rel="stylesheet" href="/styles/table.css" />
@@ -104,96 +100,6 @@
       {% include "_footer.html" %}
     {% endblock %}
 
-    {% if pageName == "index" %}
-    <script type="text/javascript">
-    //carousel height fix
-        function c_h_fix(){
-            //此处给 .carousel .bg .bgTheme 加载了额外的样式
-            var heightBg = window.innerHeight > 650 ? window.innerHeight : 650;
-            var winWidth = window.innerWidth;
-            if(winWidth > 767){
-
-                var headerHeight = parseInt(window.getComputedStyle(document.getElementById('header'), "").height);
-                var h = heightBg - headerHeight;
-
-                var carousel =  document.getElementsByClassName('carousel')[0];
-                carousel.style.height = h + "px";
-
-                var bg = document.getElementsByClassName('bg')[0];
-                bg.style.height = heightBg + "px";
-
-                var bgTheme = document.getElementsByClassName('bg-theme');
-                for (var i = 0; i < bgTheme.length; i++) {
-                    bgTheme[i].style.height = heightBg + "px";
-                };
-
-                var carouselChildren = document.getElementsByClassName("carousel")[0].children;
-                var rate = 682/700;
-                var picH = parseInt(window.getComputedStyle(document.getElementsByClassName('ai-bi-ci-headline-img')[0],"").width) * rate;
-                var margin = (h - picH)/3;
-
-                for (var i = 0; i < carouselChildren.length; i++) {
-                    carouselChildren[i].style.marginTop = margin + "px";
-                };
-
-                var slideButton = document.getElementsByClassName("slide-button");
-                var s_b_h = parseInt(window.getComputedStyle(slideButton[0], "").height);
-                for (var i = 0; i < slideButton.length; i++) {
-                    slideButton[i].style.top = (h - s_b_h)/2 + "px";
-                };
-
-                var canvasEle = document.getElementsByClassName("wavesWapper")[0];
-                canvasEle.style.height = h + "px";
-
-            }
-        };
-        c_h_fix();
-        window.addEventListener("resize", function(){c_h_fix();});
-    </script>
-    {% endif %}
-
-
-    
-    
-    
-
-    <!-- cookie -->
-    <script type="text/javascript">
-        
-        function setCookie(c_name,value,expiredays){
-
-            var exdate = new Date();
-            exdate.setDate(exdate.getDate()+expiredays);
-            document.cookie = c_name + "=" + escape(value) + ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
-        }
-
-        function getCookie(c_name){
-            if (document.cookie.length > 0) {
-                c_start = document.cookie.indexOf(c_name + "=");
-
-                if (c_start!= -1) {
-                    c_start = c_start + c_name.length + 1;
-                    c_end = document.cookie.indexOf(";",c_start)
-                    if (c_end == -1)
-                        c_end = document.cookie.length
-                    return unescape(document.cookie.substring(c_start,c_end))
-                }
-            }
-            return ""
-        }
-
-        function checkCookie(){
-            x = getCookie('')
-            if (x!= null && x !="") {
-                //已经有cookie
-            }else{
-                //没有 cookie
-                setCookie('x',x,30)
-            }
-
-        }
-    </script>
-
     {% block scripts %}
     <!-- build:js(.) /scripts/vendors.js -->
     <script src="/vendors/jquery/dist/jquery.js"></script>
@@ -220,7 +126,6 @@
     <!-- <script src="/scripts/back-to-top.js"></script>-->
     <!-- endbuild -->
     
-
 
     {% endblock %}
   </body>

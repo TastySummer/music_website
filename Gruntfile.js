@@ -4,6 +4,7 @@ var path = require('path')
 module.exports = function(grunt) {
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
+  require('time-grunt')(grunt);
 
   // Load grunt tasks automatically
   try{
@@ -86,6 +87,32 @@ module.exports = function(grunt) {
         }]
       }
     },
+    // compass: {
+    //   dev:{
+    //     options: {
+    //       paths: ["<%= config.app %>/styles"]
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= config.app %>/styles/',
+    //       dest: '.tmp/styles/',
+    //       src: ['**/*.scss'],
+    //       ext: '.css'
+    //     }]
+    //   },
+    //   dist:{
+    //     options: {
+    //       paths: ["<%= config.app %>/styles"]
+    //     },
+    //     files: [{
+    //       expand: true,
+    //       cwd: '<%= config.app %>/styles/',
+    //       dest: '.tmp/styles/',
+    //       src: ['**/*.scss'],
+    //       ext: '.css'
+    //     }]
+    //   }
+    // },
     favicons: {
       options: {
         trueColor: true,
@@ -106,11 +133,11 @@ module.exports = function(grunt) {
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       html:{
-        files: ['<%= config.app %>/templates/{,*/,**/,***/}*.{html,json}','config/{,*/}*.json'],
+        files: ['<%= config.app %>/templates/{,*/}*.{html,json}','config/{,*/}*.json'],
         tasks: ['swigstatic:dev']
       },
       js: {
-        files: ['<%= config.app %>/scripts/{,*/,**/,***/}*.js'],
+        files: ['<%= config.app %>/scripts/{,*/,**/}*.js'],
         tasks: ['jshint'],
         options: {
           livereload: false
@@ -205,21 +232,21 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= config.app %>/scripts/{,*/,**/,***/}*.js',
+        '<%= config.app %>/scripts/{,*/,**/}*.js',
         '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/,**/,***/}*.js'
+        'test/spec/{,*/}*.js'
       ]
     },
 
-    // Renames files for browser caching purposes(加防止缓存的码。)
+    // Renames files for browser caching purposes
     rev: {
       dist: {
         files: {
           src: [
-            '<%= config.dist %>/scripts/{,*/,**/,***/}*.js',
-            '<%= config.dist %>/styles/{,*/,**/,***/}*.css',
-            '<%= config.dist %>/images/{,*/,**/,***/}*.*',
-            '<%= config.dist %>/fonts/{,*/,**/,***/}*.*'
+            '<%= config.dist %>/scripts/{,*/,**/}*.js',
+            '<%= config.dist %>/styles/{,*/,**/}*.css',
+            '<%= config.dist %>/images/{,*/,**/}*.*',
+            '<%= config.dist %>/fonts/{,*/,**/}*.*'
             // ,
             // '<%= config.dist %>/*.{ico,png}'
           ]
@@ -229,13 +256,13 @@ module.exports = function(grunt) {
 
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
-    // additional tasks can operate on them（）
+    // additional tasks can operate on them
     useminPrepare: {
       options: {
         dest: '<%= config.dist %>',
         root:'<%= config.app %>'
       },
-      html: '<%= config.dist %>/{,*/,**/,***/}*.html'
+      html: '<%= config.dist %>/**/*.html'
     },
 
     // Performs rewrites based on rev and the useminPrepare configuration
@@ -248,8 +275,8 @@ module.exports = function(grunt) {
           '<%= config.dist %>/scripts'
         ]
       },
-      html: ['<%= config.dist %>/{,*/,**/,***/}*.html'],
-      css: ['<%= config.dist %>/styles/{,*/,**/,***/}*.css']
+      html: ['<%= config.dist %>/**/*.html'],
+      css: ['<%= config.dist %>/styles/**/*.css']
     },
 
     // The following *-min tasks produce minified files in the dist folder
@@ -291,7 +318,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= config.dist %>',
-          src: '{,*/,**/,***/}*.html',
+          src: '{,*/,**/}*.html',
           dest: '<%= config.dist %>'
         }]
       }
@@ -306,7 +333,34 @@ module.exports = function(grunt) {
           cwd: '<%= config.app %>',
           dest: '<%= config.dist %>',
           src: [
-            './*.{ico,png,txt,html,xml,svg,js}'
+            'pdf/*'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            'docs/**'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            'scan_docs/**'
+          ]
+        },
+        {
+          expand: true,
+          dot: true,
+          cwd: '<%= config.app %>',
+          dest: '<%= config.dist %>',
+          src: [
+            './*.{ico,png,txt,html,xml}'
           ]
         }, {
           expand: true,
@@ -332,7 +386,7 @@ module.exports = function(grunt) {
     cdnify: {
       dist: {
         options: {
-          // base: '//static.oneapm.com/assets/sites',
+           // base: 'onealert/',
           css:false,
           rewriter:function(url){
             // console.log('cdnify',url);
@@ -342,7 +396,7 @@ module.exports = function(grunt) {
             if(/^(http|\/\/)/.test(url)){
               return url
             }
-            return '//static.oneapm.com/assets/sites2'+url
+            return '/'+url
           }
         },
         files: [{
@@ -356,7 +410,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('serve'
-  , 'start the server and preview your app at 127.0.0.1:9000'
+  , 'start the server and preview your app at 127.0.0.1:9999'
   , [
     'clean:server',
     'swigstatic:dev',
@@ -374,7 +428,7 @@ module.exports = function(grunt) {
     'less:dist',
     // 'favicons:dist',
     'static-min:dist',
-    'cdnify:dist'
+    // 'cdnify:dist'
   ]);
 
   grunt.registerTask('test'
