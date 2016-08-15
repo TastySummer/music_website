@@ -11,7 +11,35 @@ body {
 	height: 350px;
 	background-color: #51BCE8;
 }
-
+.center{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    .content{
+        //text-align: center;
+        width: 100%;
+        height: 10.5em;
+        padding: 0 4.5em;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -o-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -o-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        h3{
+            margin-top: 0px;
+        }
+    }
+}
 .box-wrapper {
     padding:0px;
 }
@@ -33,35 +61,6 @@ body {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        .center{
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            left: 0;
-            top: 0;
-            margin: auto;
-            .content{
-                //text-align: center;
-                width: 100%;
-                height: 10.5em;
-                padding: 0 4.5em;
-                -webkit-box-align: center;
-                -moz-box-align: center;
-                -o-box-align: center;
-                -ms-flex-align: center;
-                -webkit-align-items: center;
-                align-items: center;
-                -webkit-box-pack: center;
-                -moz-box-pack: center;
-                -o-box-pack: center;
-                -ms-flex-pack: center;
-                -webkit-justify-content: center;
-                justify-content: center;
-                h3{
-                    margin-top: 0px;
-                }
-            }
-        }
     }
     &.br-white{
     	background-color: #fff;
@@ -190,7 +189,15 @@ body {
 .box.circle {
     border-radius: 50%;
 }
-
+.box.box-instrument{
+  .center .content{
+    height: 3.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    h3{
+      text-align: center;
+    }
+  }
+}
 .box .box-content {
     width: 100%;
     height: 100%;
