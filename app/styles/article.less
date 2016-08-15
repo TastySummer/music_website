@@ -1,0 +1,799 @@
+@import "lesshat";
+@font-face {
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot'); /* IE9*/
+  src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+  url('../fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('../fonts/iconfont.ttf.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+@font-face {
+  font-family:'PingHei';
+  font-style:normal;
+  font-weight:100;
+  src:local('☺︎'), url("../fonts/PingHei-light.woff") format("woff"), url("../fonts/PingHei-light.ttf") format("truetype");
+  /* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+.modal-dialog{
+	font-family:"Hiragino Sans GB","Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;
+}
+.headline-bg.client-headline-bg {
+	overflow: hidden;
+	background: -webkit-linear-gradient(top, #7c7c7c, #b4b4b4);
+	background: -moz-linear-gradient(top, #7c7c7c, #b4b4b4);
+    background: -o-linear-gradient(top, #7c7c7c, #b4b4b4);
+    background: linear-gradient(to bottom, #7c7c7c, #b4b4b4);
+}
+//hide body scroll bar began
+.overflowhide{
+	overflow: hidden;
+}
+.showscroll{
+	overflow-y: scroll;
+	// display: block;
+}
+//hide body scroll bar end
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:75px;
+    font-style:normal;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.client-headline-bg{
+	height: 605px;
+}
+.text-border{
+  height: 0px;
+  width: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 15px auto 25px;
+}
+.section.jobs{
+	.clientintrol{
+		padding-left: 40px;
+		h2.title{
+			font-weight: 400;
+			margin-top: 0px;
+			margin-bottom: 10px;
+		}
+		p.intro{
+			text-align: left;
+			color: rgba(255, 255, 255, 0.7);
+			margin-bottom: 20px;
+		}
+		.p-btn{
+			.btn{
+				margin-right: 15px;
+				border-radius: 4px;
+				font-weight: 400;
+			}
+			.btn-solid{
+				color:#fff;
+				background-color: #006ec3;
+				border-color: #006ec3;
+			}
+			.btn-demo{
+				color: rgba(255, 255, 255, 0.7);
+				border-color: rgba(255,255,255,0.7);
+	    		font-weight: normal;
+	    		text-transform: uppercase;
+	    		font-size: 14px;
+	    		text-decoration: none;
+	    		border: 1px solid #fff;
+	    		padding: 6px 16px;
+			}
+		}
+	}
+	.block-hover-shadow {
+	    -webkit-backface-visibility: hidden;
+	    -ms-backface-visibility: hidden;
+	    backface-visibility: hidden;
+	    -webkit-transform: translate3d(0,0,0);
+	    -ms-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+	    -webkit-filter: none;
+	    -ms-filter: none;
+	    filter: none;
+	    box-shadow: none;
+	    -webkit-transition: all .2s ease-out;
+	    -ms-transition: all .2s ease-out;
+	    transition: all .2s ease-out;
+	    &:hover{
+	    	transform: translate3d(0,-5px,0);
+    		box-shadow: 0 20px 25px 0 rgba(0,0,0,.15);
+	    }
+	}
+	.quote {
+	    height: auto;
+	    min-height: initial;
+	    &:after{
+		    content: "";
+		    position: absolute;
+		    right: 48px;
+		    bottom: -30px;
+		    width: 0;
+		    height: 0;
+		    border-style: solid;
+		    border-width: 0 48px 38px 0;
+		    border-color: transparent #fff transparent transparent;
+	    }
+	    p{
+	    	color: #333;
+	    	margin-top: 35px;
+	    }
+	    .quote-pic {
+		    position: absolute;
+		    left: 50%;
+		    top: -35px;
+		    width: 80px;
+		    -webkit-transform: translateX(-50%);
+		    -ms-transform: translateX(-50%);
+		    transform: translateX(-50%);
+		    border-radius: 50%;
+		    overflow: hidden;
+		    img{
+		    	width: 100%;
+		    }
+		}
+		blockquote{
+		    font-size: 14px;
+		    color: #8c95a2;
+		    font-weight: 400;
+		    border: none;
+		    padding: 0px;
+		    color: #ababab;
+		    width:100%;//IE 兼容
+		    a{
+		    	display: block;
+		    	margin-top: 10px;
+		    	cursor: pointer;
+		    	&:hover{
+		    		text-decoration: none;
+		    	}
+		    }
+		}
+	}
+	.note{
+		position: relative;
+	    display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	    flex-direction: column;
+	    -webkit-flex-wrap: nowrap;
+	    -ms-flex-wrap: nowrap;
+	    flex-wrap: nowrap;
+	    -webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	    justify-content: space-between;
+	    -webkit-align-content: space-between;
+	    -ms-flex-line-pack: justify;
+	    align-content: space-between;
+	    -webkit-align-items: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    width: 100%;
+	    padding: 15px 30px;
+	    text-align: center;
+	    color: #e1d5d0;
+	    background-color: #fff;
+	}
+}
+.features-tabbed-index.jobs-tabbed{
+	.tab-header{
+		height: 40px;
+		background: rgb(125, 125, 125);
+	}
+	.tab-client{
+		display: block;
+		color: #fff;
+		font-size: 14px;
+		line-height: 40px;
+	}
+	ul.nav-tabs > li{
+		&.active {
+	    	color:rgb(125, 125, 125);
+	    	a{
+	    		background-color: #f7f7f7!important;
+	    		.tab-client{
+					color:rgb(125, 125, 125);
+				}
+	    	}
+	    }
+	    &>a:hover{
+    		background: rgba(250, 250, 250, 0.2);
+    	}
+    }
+	.tab-content{
+		padding: 30px 0px 100px!important;
+		.tab-pane{
+			.contents{
+				.panel{
+					background-color: #fff;
+					.transition(box-shadow 0.3s ease-in-out,transform 0.3s ease-in-out);
+					&:hover{
+						box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+					    -webkit-transform: translate3d(0, -2px, 0);
+					    -moz-transform: translate3d(0, -2px, 0);
+					    -o-transform: translate3d(0, -2px, 0);
+					    -ms-transform: translate3d(0, -2px, 0);
+					    transform: translate3d(0, -2px, 0);
+					}
+					.panel-heading{
+						padding: 20px 15px;
+						.panel-title{
+							// a{
+								p.job-name{
+									font-size: 16px;
+									text-align: center;
+									color:#cacaca;
+									width: 100%;
+									font-weight: 400;
+								}
+								p.job-decri{
+									min-height: 50px;
+									text-align: center;
+									color:#ababab;
+								}
+								img{
+									width: 80%;
+									display: block;
+									margin: 10px auto;
+								}
+								.text-border{
+									width: 50px;
+									height: 0px;
+									border-top: 1px solid rgba(33, 33, 33, 0.1);
+									margin: 15px auto 25px;
+								}
+							// }
+						}
+					}
+				}
+			}
+			.contents.hidden-lg.hidden-md{
+				padding-left:30px;
+				padding-right:30px;
+			}
+		}
+	}
+}
+
+.cta-section.pricing-cta-section.client-cta {
+	background: -webkit-linear-gradient(top, #7c7c7c, #b4b4b4);
+	background: -moz-linear-gradient(top, #7c7c7c, #b4b4b4);
+    background: -o-linear-gradient(top, #7c7c7c, #b4b4b4);
+    background: linear-gradient(to bottom, #7c7c7c, #b4b4b4);
+    padding: 70px 0;
+    img{
+    	float: left;
+    	width: 100px;
+    	margin-right: 5%;
+    	margin-top: 30px;
+    }
+    .slogan{
+    	margin-top: 30px;
+    	h2{
+    		text-align: left;
+    	}
+    	p{
+    		text-align: left;
+    		font-size: 18px;
+    	}
+
+    }
+    .btn-sign-ye {
+    	color: #ababab;
+    	margin-top: 35px;
+    }
+}
+//new nextpagebtn began
+.nextpagebtn{
+	width:75px;
+	height:80px;
+	position: fixed;
+	top:550px;
+	right:15px;	//右侧滚动条
+	color: rgba(255, 255, 255, 0.5);
+	display: none;
+	z-index: 1042;
+	transition:all 0.2s ease-in-out;
+	&:hover{
+		color: rgba(255, 255, 255, 1);
+		transition:all 0.2s ease-in-out;
+	}
+}
+.nextpagebtn.pagebtn-mobile{
+	right: 0;
+}
+.prevpagebtn{
+	width:75px;
+	height:80px;
+	position:fixed;
+	top:550px;
+	left:0;
+	color: rgba(255, 255, 255, 0.5);
+	display: none;
+	z-index: 1042;
+	transition:all 0.2s ease-in-out;
+	&:hover{
+		color: rgba(255, 255, 255, 1);
+		transition:all 0.2s ease-in-out;
+	}
+}
+//new nextpagebtn end
+
+
+// for cases began
+.showcases{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 41;
+}
+#myModal{
+	.client-modal-bg{
+		display: none;
+	}
+	#myclientcase .modal-content{
+		.nextpage-btn,.prevpage-btn{
+			display: block;
+		}
+	}
+}
+#myModal.fade.in{
+	display: block;
+}
+.casebg-hide{
+	width:100%;
+	position:fixed;
+	top:0;
+	background-color:rgba(0, 0, 0, 0.5);
+	// z-index:50;//解决播放按钮在背景之上
+  	z-index: 105;
+	display:none;
+}
+//client cases bg began
+.client-modal-bg{
+	background-color: rgba(40, 26, 19, 0.2);
+	background-color: #aaa;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+//client cases bg end
+#myclientcase{
+	transform:scale(1);
+	transition:transform 0.4s ease-in-out;
+	.modal-content{
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		background-color: #fff;
+		border-top-width: 0;
+		.modal-header{
+	  		text-align: center;
+	  		height: 306px;
+	  		padding-top: 45px;
+	  		p{
+	  			padding-top: 15px;
+	  			margin-bottom: 0;
+	  			color: rgba(255, 255, 255, 0.5);
+	  			font-weight: 600;
+	  			font-size: 16px;
+	  		}
+	  		img{
+	  			width: 240px;
+	  		}
+	  		h2{
+	  			padding: 10px 15px 15px;
+	  			color: rgba(255, 255, 255, 1);
+	  			font-weight: 400;
+	  		}
+		}
+		.modal-header-sub{
+			// background-color:#f2f2f2;
+			line-height: 1em;
+			height: 141px;
+			padding-left: 80px;
+			padding-right: 30px;
+			.infor-title{
+				font-size: 13px;
+				color: #555;
+				margin-bottom: 5px;
+			}
+			.infor-text{
+				font-size: 16px;
+				color: #b1b1b1;
+			}
+			.p{
+				margin-top: 0;
+			}
+			.infor{
+				float: left;
+				padding: 30px 0 15px;
+				position: relative;
+				min-height: 1px;
+			}
+			.infor-long{
+				float: left;
+				padding: 30px 0 15px;
+				padding-left: 15px;
+				position: relative;
+				min-height: 1px;
+			}
+			.infor-last{
+				float: left;
+				padding: 30px 0 15px;
+				margin-left: -15px;
+				position: relative;
+				min-height: 1px;
+			}
+			.modal-header-subborder{
+				border-top:1px solid #f2f2f2;
+				float: left;
+				width:650px;
+			}
+		}
+		span{
+			color: #fff;
+			text-align: center;
+			line-height: 51px;
+			&:hover{
+				.transition(transform 0.2s ease-in-out);
+				.transform(rotate(90deg));
+			}
+		}
+		.close.client-close-btn{
+			position: absolute;
+			top: 0;
+			right: -55px;
+			width: 55px;
+			height: 55px;
+			font-size: 36px;
+			opacity: 1;
+			font-weight: 100;
+			background-color: #d3d3d3;
+			text-shadow:none;
+			border: none;
+			cursor: pointer;
+			&:hover{
+				div{
+					.transition(transform 0.2s ease-in-out);
+					.transform(rotate(90deg));
+				}
+			}
+	        &:focus{
+	        	outline: none;
+	        }
+			div{
+				color: #6f6f6f;
+				font-family: "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, Verdana, "Microsoft Yahei", sans-serif;
+			}
+		}
+		.content-text{
+			padding: 30px 60px;
+			p{
+				line-height: 1.5em;
+				padding-bottom: 15px;
+			}			
+			h2{
+				font-weight: 400;
+				color: #333;
+			}
+			.text-border{
+				margin: 20px 0;
+				border-top-color: #ccc;
+				width: 40px;
+			}
+
+			.content-text-title{
+				border-left:8px solid rgba(158, 158, 158, 0.5);
+				padding-left: 20px;
+				margin-bottom: 60px;
+				p{
+					padding-bottom: 0;
+				}
+			}
+			.content-text-upper{
+				.imgpart{
+					padding-bottom: 30px;
+					text-align: center;
+					img{
+						width: 100%;
+					}
+				}
+				ul{
+					padding-bottom: 30px;
+					padding-left: 15px;
+					font-size: 14px;
+					li{
+						line-height: 1.5em;
+						padding-bottom: 10px;
+					}
+				}
+				.content-text-subtitle{
+					font-weight: 600;
+					padding-bottom: 0;
+					margin-bottom: 5px;
+				}
+				p:last-child{
+					padding-bottom: 45px;
+				}				
+			}
+			.content-text-mid{
+				.content-text-subtitle{
+					font-weight: 600;
+					padding-bottom: 0;
+					margin-bottom: 5px;
+				}
+				p{
+					color: rgba(51,51,51,1);
+					margin-top: 5px;
+					padding-bottom: 15px;
+				}
+				ul{
+					padding-bottom: 30px;
+					padding-left: 15px;
+					font-size: 14px;
+					li{
+						line-height: 1.5em;
+						padding-bottom: 10px;
+					}
+				}
+				.imgpart{
+					padding-bottom: 30px;
+					text-align: center;
+					img{
+						width: 100%;
+					}
+					p{
+						font-weight:600;
+						padding-bottom:15px;
+					}
+				}
+				p:last-child{
+					padding-bottom: 45px;
+				}
+			}
+			.content-text-lower{
+				margin-top: 30px;
+				margin-bottom: 25px;
+				.content-text-subtitle{
+					font-weight: 600;
+					padding-bottom: 10px;
+				}
+				p{
+					color: rgba(51,51,51,1);
+				}
+				ul{
+					padding-bottom: 30px;
+					padding-left: 15px;
+					font-size: 14px;
+					li{
+						line-height: 1.5em;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+		.content-share{
+			text-align: center;
+			ul{
+				list-style: none;
+				li{
+					display: inline;
+					i{
+						font-family: "iconfont";
+					}
+				}
+			}
+		}
+		.nextpage-btn{
+			width:75px;
+			height:80px;
+			position:absolute;
+			top:550px;
+			right:-75px;
+			color: rgba(255, 255, 255, 0.5);
+			display: none;
+		}
+		.prevpage-btn{
+			width:75px;
+			height:80px;
+			position:absolute;
+			top:550px;
+			left:-75px;
+			color: rgba(255, 255, 255, 0.5);
+			display: none;
+		}
+		.content-image{
+			img{
+				position: relative;
+			}
+		}
+	}
+}
+
+#myclientcase.smallcase{
+	transform:scale(0.9);
+	transition:transform 0.2s ease-in-out;
+}
+// for cases end
+@media(min-width:1200px){
+	.features-tabbed-index.jobs-tabbed .tab-content .tab-pane .contents .panel .panel-heading{
+		height: 256px;
+	}
+}
+@media(min-width:992px){
+	.modal-dialog{
+		width: 810px;
+	}
+	.section.jobs .clientintrol {
+    	padding-left: 15px;
+    }
+    .modal.modal-video{
+    	.modal-dialog{
+    		margin-top: 12%;
+    	}
+    }
+    #myclientcase{
+		.modal-content{
+			.modal-header-sub{
+				.infor{
+					width: 19.67%;
+				}
+				.infor-long,.infor-last{
+					width: 30.33%;
+				}
+			}
+		}
+	}
+	.features-tabbed-index.jobs-tabbed .tab-content .tab-pane .contents .panel .panel-heading{
+		height: 242px;
+	}
+}
+@media(min-width:768px) and (max-width:991px){
+	#myclientcase{
+		width: 640px;
+		.modal-content{
+			.modal-header-sub{
+				padding-left: 75px;
+				.infor{
+					width: 20.67%;
+				}
+				.infor-long{
+					width: 27.33%;
+				}
+				.infor-last{
+					width: 27.33%;
+					padding-left: 20px;
+				}
+				.modal-header-subborder{
+					width:535px;
+				}
+			}
+		}
+	}
+	.features-tabbed-index.jobs-tabbed .tab-content .tab-pane .contents .panel .panel-heading{
+		height: 270px;
+	}
+}
+@media(max-width:767px){
+	#myclientcase{
+		.modal-content{
+			.content-text{
+	    		padding-right: 30px;
+	    		padding-left: 30px;
+	    	}
+	    	.client-header-bg{
+			height: 320px;
+			}
+			.close.client-close-btn{
+				right: 0;
+				width: 35px;
+				height: 35px;
+				font-size: 20px;
+				z-index: 45;
+				span{
+					line-height: 35px;
+				}
+			}
+			.modal-header-sub{
+				height: 275px;
+				padding-left: 30px;
+				text-align: center;
+				.infor{
+					width: 50%;
+					padding-bottom: 0;
+				}
+				.infor-long,.infor-last{
+					width: 50%;
+					margin-left: 0;
+					padding-left: 0;
+				}
+				.modal-header-subborder{
+					width: 100%;
+				}
+			}
+		}
+	}
+	.client-headline-bg{
+		height: 600px;
+	}
+	.headline-bg + .section {
+	    padding: 30px 0;
+	}
+	.cta-section.pricing-cta-section {
+        margin-top: 0px;
+    	padding-top: 50px;
+   	 	padding-bottom: 40px;
+        .slogan{
+        	margin-top: 0;
+        	h2.title{
+        		text-align: center;
+        	}
+        	p{
+        		text-align: center;
+        	}
+        }
+        .btn-sign-ye{
+        	margin-top: 20px;
+        }
+    }
+    .features-tabbed-index.jobs-tabbed .tab-content .tab-pane .contents .panel .panel-heading{
+		height: 259px;
+	}
+}
+@media(min-height:481px) {
+	.tab-content{
+		min-height: 600px;
+	}
+}
+@media (max-width: 480px){
+	.jobs.section-on-bg {
+	    padding-bottom: 27px;
+	}
+	.jobs-tabbed .tab-client {
+    	font-size: 12px;
+    }
+    .cta-section.pricing-cta-section {
+        margin-top: 0px;
+    }
+    #myclientcase{
+	    .modal-content{
+	    	.content-text{
+	    		padding-right: 15px;
+	    		padding-left: 15px;
+	    	}
+	    }
+	}
+	.features-tabbed-index.jobs-tabbed {
+		.tab-content {
+			.tab-pane {
+				.contents.hidden-lg.hidden-md{
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	.features-tabbed-index.jobs-tabbed .tab-content .tab-pane .contents .panel .panel-heading{
+		height: auto;
+	}
+}
+
+@media (max-width: 375px){
+	.headline-bg.about-headline-bg {
+    	height: 415px;
+    }
+
+}

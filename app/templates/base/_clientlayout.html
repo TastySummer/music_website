@@ -1,0 +1,14 @@
+<head class="pjax">
+ 	{% block seotag %}
+	<meta name="keywords" content="{{keywords}}" />
+	<meta name="description" content="{{description}}" />
+	 {% endblock %}
+	<title>{{pageTitle}}</title>
+	<!-- build:css(.tmp/) /styles/client.css -->
+    <link rel="stylesheet" href="/styles/clientcase.css" />
+    <!-- endbuild -->
+</head>
+{% block content %}
+<p>This is just an awesome page.</p>
+{% endblock %}
+

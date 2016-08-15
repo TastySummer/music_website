@@ -1,0 +1,41 @@
+@import "lesshat";
+.bg-theme{
+	display: none;
+	.transition(left 0.7s ease);
+}
+.slideimg{
+	display: none;
+	.transition(left 0.7s ease);
+}
+
+.carousel-bg,
+.carousel-img{
+	left: 0%;
+	display: block;
+}
+.next-container{
+	left: 100%;
+	display: block;
+}
+.pre-container{
+	left: -100%;
+	display: block;
+}
+.carousel-bg.left-slide,
+.carousel-img.left-slide{
+	left: -100%;
+	display: block;
+}
+.next-container.left-slide{
+	left: 0%;
+	display: block;
+}
+.carousel-bg.right-slide,
+.carousel-img.right-slide{
+	left: 100%;
+	display: block;
+}
+.pre-container.right-slide{
+	left: 0%;
+	display: block;
+}

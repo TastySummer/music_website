@@ -1,0 +1,87 @@
+/** button styles *****/
+/* 需要任何按钮的时候一定用这里面的，如果没有就需要协商后加上 */
+
+/*** button 大小  ******/
+/*** 规定按钮的大小，通过字体大小，padding等  ******/
+.btn{
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+.btn-large{
+	padding: 10px 30px;
+	font-size:18px; 
+	border-width: 2px;
+}
+
+.btn-middle{
+	font-size: 18px;
+    padding: 8px 20px;
+    border: solid 2px #fff;
+}
+
+.btn-small{
+	font-size: 13px;
+	border: 1px solid rgba(255,255,255,.6);
+	padding: 8px 10px;
+	height: auto;
+	color: rgba(255,255,255,.6);
+	&:hover{
+		border: 1px solid #fff;
+    	background: #fff;
+    	color: #006ec3;
+	}
+}
+
+
+.btn-long{
+	padding: 8px 30px;
+	font-weight: 700;
+	color: #fff;
+}
+
+
+@media(max-width: 767px){
+	.btn-large{
+		padding: 8px 20px;
+	}
+
+	.btn-middle{
+
+	}
+
+	.btn-small{
+
+	}
+}
+
+
+/***** button style *********/
+/***** 规定按钮的形状,主要通过border，background规定按钮的实心空心等 *********/
+
+.btn-solid{
+	font-size: 14px;
+	padding: 6px 16px;
+	font-weight: normal;
+	border: 1px solid #fff;
+	background: #fff;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+.btn-hollow{
+	font-size: 14px;
+	padding: 6px 16px;
+	font-weight: normal;
+	border: 1px solid #fff;
+	&:hover{
+		opacity: 0.8;
+	}
+}
+
+
+
+/**** button color *****/
+/***** 规定按钮的形状,主要通过border，background规定按钮的颜色，主要针对不同产品的不同颜色去定义 *********/

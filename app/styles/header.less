@@ -1,0 +1,148 @@
+header#navbar {
+  margin-bottom: 0px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  .nav-mask {
+    background-color: #f6f1eb;
+    height: 80px;
+    width: 0px;
+    position: absolute;
+    top: 0px;
+    z-index: 9000;
+    left: 0;
+  }
+  .wrapper {
+    position: relative;
+  }
+  a.logo {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: #f5c538 url(/sites/all/themes/bootstrap/frogweb6/css/images/friedolin.png) no-repeat right top;
+    cursor: pointer;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    //left: 20px;
+    margin: 0px;
+    padding: 0px 0px;
+    width: 100%;
+    list-style-type: none;
+    li {
+      position: relative;
+      margin-right: 15px;
+      > ul {
+        display: none;
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+        li {
+          position: static;
+          display: block;
+        }
+      }
+      &.active,&:hover,&.current{
+        a{
+          background-color: #fff;
+        }
+      }
+      a{
+        width: 94%;
+        padding-left: 6%;
+        color: #f5c538;
+        text-decoration: none;
+        text-transform: uppercase;
+        font: bold 2.33333333333333em/55px "BentonSans","Arial",sans-serif;
+        display: inline-block;
+        border: 1px solid #fff;
+      }
+    }
+    &.nav-right{
+      li a{
+        background-color: transparent;
+        color: #fff;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}
+header .section {
+  padding: 8.33333333333333% 16.66666666666666% 8.33333333333333% 8.33333333333333%;
+  h2 {
+    font: bold 3em/1.0em "BentonSans","Arial",sans-serif;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+@media (min-width: 1025px){
+  header#navbar nav {
+    position: relative;
+  }
+  header#navbar .menu {
+    height: 80px;
+    width: auto;
+    padding: 0px;
+    max-width: 100%;
+    li {
+      float: left;
+      line-height: 80px;
+      a {
+        width: auto;
+        padding: 0px 20px;
+        font-size: 11px;
+        line-height: 30px;
+        display: block;
+        border-radius: 30px;
+        margin-top: 30px;
+      }
+    }
+    > li:hover ul {
+      display: block !important;
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      min-width: 222px;
+      background-color: #161616;
+      li {
+        float: none;
+        height: 40px;
+        a {
+          font-size: 11px;
+          display: block;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+  .i18n-zh-hans header#navbar .menu li a {
+      font-size: 12px;
+  } 
+}
+
+@media (max-width: 1024px){
+  header#navbar .menu {
+      top: 0px;
+      width: 440px;
+  }
+}
+
+@media (max-width: 900px){
+  header#navbar .nav-mask {
+      display: none;
+  }
+}
+
+@media (max-width:480px){
+  header#navbar .menu{
+      width: 100%;
+  }
+}
