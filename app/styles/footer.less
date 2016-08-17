@@ -3,7 +3,7 @@
     border: 0px;
     margin: 0px;
     padding: 5% 8.333%;
-    z-index: 100;
+    z-index: 19;
     position: relative;
     margin-bottom: 20px;
 }
@@ -98,15 +98,14 @@
 #footer .legal a {
     color: #666;
 }
+.row-fluid{
+    width: 100%;
+    position: relative;
+}
 .row-fluid .offset1 {
     margin-left: 8.333%!important;
 }
-.row-fluid .span3 {
-    width: 25%!important;
-}
-.row-fluid .span4 {
-    width: 33.333%!important;
-}
+
 .row-fluid [class*="span"] {
     position: relative;
     overflow: visible;
@@ -125,6 +124,12 @@
     box-sizing: border-box;
     float: left;
     margin-left: 2.127659574468085%;
+}
+.row-fluid .span3 {
+    width: 25%!important;
+}
+.row-fluid .span4 {
+    width: 33.333%!important;
 }
 .language-switch-area {
     top: 15px;
@@ -154,7 +159,11 @@
     margin-left: 0;
   }
 }
-
+@media (max-width: 1199px) and (min-width: 980px){
+    .row-fluid .offset1 {
+      margin-left: 6.333%!important;
+    }
+}
 @media (max-width: 979px) and (min-width: 768px){
     .row-fluid {
         width: 100%;

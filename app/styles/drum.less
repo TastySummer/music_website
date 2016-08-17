@@ -239,13 +239,13 @@ img{
     transition: all 0.5s ease-in-out;
     // opacity: 1;
 }
-.box:hover img{
-    -webkit-transform: scale(1.2);
-    -moz-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    transform: scale(1.2);
-}
+// .box:hover img{
+//     -webkit-transform: scale(1.2);
+//     -moz-transform: scale(1.2);
+//     -ms-transform: scale(1.2);
+//     -o-transform: scale(1.2);
+//     transform: scale(1.2);
+// }
 @media(min-width:1200px){
   .box.box-lg{
     height: 600px;
@@ -334,8 +334,11 @@ img{
   
 }
 
-@media(min-width:375px) and (max-width: 479px){
-  
+@media(max-width: 479px){
+  .box:hover{
+    transform:scale(1);
+    box-shadow: none;
+  }
 }
 
 @media(max-width: 375px){

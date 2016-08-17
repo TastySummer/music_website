@@ -23,7 +23,7 @@ header#navbar {
     display: block;
     width: 120px;
     height: 120px;
-    background: #f5c538 no-repeat right top;
+    background: #FFA727 no-repeat right top;
     cursor: pointer;
   }
   .menu {
@@ -51,17 +51,24 @@ header#navbar {
       &.active,&:hover,&.current{
         a{
           background-color: #fff;
+          color: #FFA727;
+          border: 1px solid #fff;
         }
       }
       a{
         width: 94%;
         padding-left: 6%;
-        color: #f5c538;
+        color: #fff;
+        background-color: transparent;
         text-decoration: none;
         text-transform: uppercase;
         font: bold 2.33333333333333em/55px "BentonSans","Arial",sans-serif;
         display: inline-block;
-        border: 1px solid #fff;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
     }
     &.nav-right{
