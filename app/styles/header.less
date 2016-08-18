@@ -1,6 +1,6 @@
 header#navbar {
   margin-bottom: 0px;
-  position: fixed;
+  //position: fixed;
   z-index: 1000;
   width: 100%;
   top: 0;
@@ -18,13 +18,17 @@ header#navbar {
     position: relative;
   }
   a.logo {
-    position: absolute;
+    position: fixed;
     z-index: 999;
     display: block;
     width: 120px;
     height: 120px;
-    background: #FFA727 no-repeat right top;
+    background-color: #FFA727;
     cursor: pointer;
+    background-image: url(../images/header/logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   .menu {
     display: none;
@@ -35,6 +39,7 @@ header#navbar {
     padding: 0px 0px;
     width: 100%;
     list-style-type: none;
+    z-index: 2;
     li {
       position: relative;
       margin-right: 15px;
@@ -43,6 +48,7 @@ header#navbar {
         margin: 0px;
         padding: 0px;
         list-style-type: none;
+
         li {
           position: static;
           display: block;

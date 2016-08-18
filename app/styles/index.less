@@ -11,6 +11,10 @@
   height: 660px;
   background-color: rgb(204, 204, 204);
   padding: 100px 0px;
+  background-image: url(../images/index/ossia-main-banner.jpg);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
   .content-wrapper{
     padding-top: 100px;
     margin-left: 150px;
@@ -110,6 +114,7 @@
                 -webkit-box-sizing: border-box;
                 -moz-box-sizing: border-box;
                 box-sizing: border-box;
+                color: #fff;
             } 
         }
         .carousel-control {
@@ -120,17 +125,13 @@
         height: 100%;
     }
     .item:nth-child(1) {
-        background-color: #ffc100;
-        // background-image: url(../images/index/yinfu1.svg);
-        // background-position: center;
-        // background-size: cover;
-        // background-repeat: no-repeat;
+        background-color: #ffa000;
     }
     .item:nth-child(2) {
-        background-color: #ffc100;
+        background-color: #ffa000;
     }
     .item:nth-child(3) {
-        background-color: #ffc100;
+        background-color: #ffa000;
     }
     img{
       opacity: 0.1;
@@ -167,7 +168,10 @@
     top: 0px;
     left: 0px;
     z-index: 2;
-
+    color:#fff;
+    h3{
+      font-weight: 400;
+    }
 }
 img{
     position: absolute;
@@ -190,12 +194,23 @@ img{
 //     transform: scale(1.05);
 // }
 .box.box-3{
-  background-color: #ffc100;
+  background-image: url(../images/index/zhinengjiaoshi.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .box.box-4{
-  background-color:#cccccc;
+  background-image: url(../images/index/wantujiaoshi.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
+.box.box-7{
+  background-image: url(../images/index/wantuyanchu.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .box.box-13{
   img{
     width: 70%;
@@ -248,28 +263,24 @@ img{
     color: rgba(255, 255, 255, 0.8);
   }
 }
-.modal-dialog {
-    width: 100%;
-    margin: 100px 0px;
-}
-.modal-content {
-    border-radius: 0px;
-    .content{
-        margin-top: 30px;
-        margin-bottom: 30px;
-        .content-text{
-            width: 70%;
-            float: left;
-        }
-        .content-image{
-            width: 30%;
-            display: inline-block;
-            img{
-                position: relative;
-            }
-        }
-    }
-}
+// .modal-content {
+//     border-radius: 0px;
+//     .content{
+//         margin-top: 30px;
+//         margin-bottom: 30px;
+//         .content-text{
+//             width: 70%;
+//             float: left;
+//         }
+//         .content-image{
+//             width: 30%;
+//             display: inline-block;
+//             img{
+//                 position: relative;
+//             }
+//         }
+//     }
+// }
 @media(min-width:1200px){
   .box.box-lg{
     height: 600px;
