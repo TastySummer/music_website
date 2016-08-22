@@ -5,7 +5,65 @@ body {
     font-weight: 400;
     font-size: 16px; 
 }
-
+.box-wrapper {
+    padding:0px;
+}
+.box {
+    position: relative;
+    margin-top: 0px;
+    overflow: hidden;
+    z-index: 20;
+    border: 0px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    webkit-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    img{
+      opacity: 0.1;
+      z-index: -1;
+    }
+}
+.box:hover{
+  .box-hover{
+    // -webkit-transform: translate(0, 0);
+    // -moz-transform: translate(0, 0);
+    // -ms-transform: translate(0, 0);
+    // -o-transform: translate(0, 0);
+    // transform: translate(0, 0);
+    opacity: 1;
+  }
+  .box-hover-black{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    .center .content{
+      text-align: left;
+    }
+  }
+}
+.box .box-content {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    color:#fff;
+    h3{
+      font-weight: 400;
+    }
+}
+img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    // opacity: 1;
+}
 .box.box-drum{
   background-color: #00a6f6;
 }
@@ -19,7 +77,27 @@ body {
   background-color:#00c853;
 }
 .box.box-number{
-  background-color:#18bd4d;
+  background-color:#18db4d;
+  text-align: center;
+  color: #fff;
+  h2{
+      font-weight: normal;
+      line-height: 1.4;
+  }
+  a.btn{
+    background-color: #fff;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: #18cc3a;
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 6px 20px;
+    z-index: 2;
+  }
+  img{
+    z-index: -1;
+  }
 }
 .box.box-violin{
   background-color:#875e4e;
@@ -28,11 +106,10 @@ body {
   .center .content{
     height: 3.5rem;
     color: rgba(255, 255, 255, 0.8);
+    h3{
+      font-weight: 400;
+    }
   }
-}
-.box .box-hover-black {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
 }
 .box .box-hover{
   position: relative;
@@ -50,15 +127,9 @@ body {
   -o-transition: opacity 0.35s ease-in;
   transition: opacity 0.35s ease-in;
 }
-.box:hover{
-  .box-hover{
-    // -webkit-transform: translate(0, 0);
-    // -moz-transform: translate(0, 0);
-    // -ms-transform: translate(0, 0);
-    // -o-transform: translate(0, 0);
-    // transform: translate(0, 0);
-    opacity: 1;
-  }
+
+.br-white{
+  background: #fff;
 }
 .type {
   position: absolute;
@@ -107,6 +178,9 @@ body {
             text-align: center;
         }
     }
+}
+.title-sec{
+  background-color: #f8f8f8;
 }
 .btn:focus{
   outline: none;
@@ -198,15 +272,67 @@ body {
     vertical-align: middle;
     display: inline-block;
 }
-
+@media(min-width:1200px){
+  .box.box-lg{
+    height: 600px;
+  }
+  .box.box-sm{
+    height: 300px;
+  }
+  .pull-up {
+    margin-top: -300px;
+    height: 300px!important;
+  }
+}
+@media(min-width:992px) and (max-width: 1199px){
+  .box.box-lg{
+    height: 485px;
+  }
+  .box.box-sm{
+    height: 242.5px;
+  }
+  .pull-up {
+    margin-top: -242.5px;
+    height: 242.5px!important;
+  }
+  .pics {
+    height: 242.5px!important;
+  }
+}
 @media(max-width:991px) and (min-width:768px){
+  .box.box-lg{
+    height: 375px;
+  }
+  .box.box-sm{
+    height: 187.5px;
+  }
+  .pull-up {
+    margin-top: -187.5px;
+    height: 187.5px!important;
+  }
+  .pics {
+    height: 187.5px!important;
+  }
   .box .box-hover{
     p{
       font-size: 14px;
     }
   } 
 }
-@media(max-width:480px){
+@media(max-width: 767px){
+  .container{
+    padding: 0px;
+  }
+  .box-lg.box-square,.box-rectangle-fat{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .box:hover {
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+@media(max-width:479px){
   .modal-dialog{
     width: 100%;
   }
@@ -215,6 +341,13 @@ body {
       font-size: 14px;
     }
   } 
+  .box.box-instrument .center .content {
+    height: 2.5rem;
+    padding: 0;
+    h3{
+      font-size: 20px;
+    }
+  }
 }
 
 @media(max-width:375px){
