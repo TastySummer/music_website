@@ -1,12 +1,3 @@
-body {
-    background: #f6f1eb; 
-    font-family: "Hiragino Sans GB",PingHei,"Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
-    font-weight: 400; 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 .background{
   height: 660px;
   background-color: rgb(204, 204, 204);
@@ -33,53 +24,6 @@ body {
         border: none;
       }
     }
-  }
-}
-.type {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 101;
-  text-align: center;
-  span {
-    background-color: #fff;
-    color: #000;
-    padding: 0px 10px;
-    position: relative;
-    z-index: 101;
-    font: bold 9px/20px "BentonSans","Arial",sans-serif;
-    text-transform: uppercase;
-    display: inline-block;
-    top: -4px;
-  }
-}
-.center{
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  top: 0;
-  margin: auto;
-  .content{
-      text-align: center;
-      width: 100%;
-      height: 5.5em;
-      padding: 0 1.7em;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      -o-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      -o-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      h3{
-          margin-top: 0px;
-      }
   }
 }
 .box-wrapper {
@@ -224,18 +168,6 @@ img{
     height: 9.5em;
   }
 }       
-.box.box-drum{
-  background-color: #00a6f6;
-}
-.box.box-piano{
-  background-color:#ab47bc;
-}
-.box.box-guitar{
-  background-color:#ef6c00;
-}
-.box.box-saxophone{
-  background-color:#00c853;
-}
 .box.box-number{
   background-color:#18bd4d;
   text-align: center;
@@ -259,15 +191,7 @@ img{
     z-index: -1;
   }
 }
-.box.box-violin{
-  background-color:#875e4e;
-}
-.box.box-instrument{
-  .center .content{
-    height: 3.5rem;
-    color: rgba(255, 255, 255, 0.8);
-  }
-}
+
 // .modal-content {
 //     border-radius: 0px;
 //     .content{
@@ -330,6 +254,9 @@ img{
 
 }
 @media(min-width:768px) and (max-width: 991px){
+  .background .content-wrapper {
+    margin-left: 120px;
+  }
   .box.box-lg{
     height: 375px;
   }
@@ -354,6 +281,10 @@ img{
   .box-lg.box-square,.box-rectangle-fat{
     margin-left: auto;
     margin-right: auto;
+  }
+  .background .content-wrapper {
+    margin-left: 0px;
+    text-align: center;
   }
 }
 @media(min-width:480px){
