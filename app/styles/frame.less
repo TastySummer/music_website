@@ -17,7 +17,7 @@ body {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     webkit-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     img{
-      opacity: 0.1;
+      opacity: 0.05;
       z-index: -1;
     }
 }
@@ -94,9 +94,16 @@ img{
     font-size: 16px;
     padding: 6px 20px;
     z-index: 2;
+    opacity: 0;
   }
   img{
     z-index: -1;
+  }
+  &:hover{
+    a.btn{
+      transition: all  0.8s ease-in-out;
+      opacity: 1;
+    }
   }
 }
 .box.box-violin{
@@ -105,9 +112,60 @@ img{
 .box.box-instrument{
   .center .content{
     height: 3.5rem;
+    padding: 0;
     color: rgba(255, 255, 255, 0.8);
     h3{
       font-weight: 400;
+      font-size: 36px;
+    }
+  }
+}
+.box.box-link{
+  .box-content{
+    padding: 20px 60px;
+    position: relative;
+  }
+  h4.vice-title{
+    font-weight: normal;
+    color: rgba(43,43,43,.5);
+    margin-top: 90px;
+  }
+  h3{
+    margin-top: 10px;
+    font-size: 36px;
+  }
+  ul{
+    color: rgba(43,43,43,.5);
+    padding-left: 0;
+    list-style: none;
+    margin-top: 85px;
+    font-size: 16px;
+    li{
+      line-height: 1.8;
+    }
+  }
+  p{
+    font-size: 14px;
+    margin-top: 88px;
+    width:90%;
+    color: #333;
+  }
+  a{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 6px 12px; 
+    opacity: 0;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  &:hover{
+    a{
+      transition: all  0.8s ease-in-out;
+      opacity: 1;
     }
   }
 }
@@ -185,7 +243,7 @@ img{
 .btn:focus{
   outline: none;
 }
-.modal-dialog{
+#myModal1 .modal-dialog{
   width: 380px;
   margin: 60px auto;
   .modal-content{
@@ -258,6 +316,62 @@ img{
     }
   }
 }
+#myModal2 .modal-backdrop.in {
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+}
+#myModal2 .modal-dialog{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 560px;
+  overflow: auto;
+  display: block;
+  .modal-content{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    .modal-header{
+      border-bottom: none;
+      .title {
+        font-size: 32px;
+        margin: 0 20px 40px;
+        text-align: center;
+      }
+    }
+    .modal-body{
+      .text-wrap {
+        margin: 0 20px 50px;
+        font-size: 14px;
+         .note {
+          font-size: 12px;
+          padding-left: 1em;
+          text-indent: -1em;
+        }
+      }
+      .close {
+        display: block;
+        width: 80px;
+        margin: 0 auto;
+        text-align: center;
+        color: white;
+        font-size: 14px;
+        line-height: 140%;
+        font-size: 36px;
+        opacity: 1;
+        float: inherit;
+        &:focus{
+          outline: none;
+        }
+      }
+    }
+  }
+}
 .web_wechat_login_phone_icon {
     background: url(../images/sprite.png) 0 -1135px;
     width: 32px;
@@ -271,6 +385,11 @@ img{
     height: 32px;
     vertical-align: middle;
     display: inline-block;
+}
+@media(min-width:768px){
+  #myModal2 .modal-dialog{
+    width: 560px;
+  }
 }
 @media(min-width:1200px){
   .box.box-lg{
@@ -298,26 +417,33 @@ img{
   .pics {
     height: 242.5px!important;
   }
+  .box.box-instrument .center .content h3{
+    font-size: 30px;
+  }
 }
 @media(max-width:991px) and (min-width:768px){
   .box.box-lg{
-    height: 375px;
+    height: 750px;
   }
   .box.box-sm{
-    height: 187.5px;
+    height: 375px;
   }
   .pull-up {
-    margin-top: -187.5px;
-    height: 187.5px!important;
+    margin-top: -375px;
+    height: 375px!important;
   }
   .pics {
-    height: 187.5px!important;
+    height: 375px!important;
   }
   .box .box-hover{
     p{
       font-size: 14px;
     }
-  } 
+  }
+  .box.box-instrument .center .content {
+    height: 2.5rem;
+    padding: 0;
+  }
 }
 @media(max-width: 767px){
   .container{
@@ -330,6 +456,20 @@ img{
   .box:hover {
     transform: scale(1);
     box-shadow: none;
+  }
+  .box.box-instrument .center .content h3{
+    font-size: 32px;
+  }
+  #myModal2 .modal-dialog .modal-content {
+    .modal-header .title{
+      font-size: 20px;    
+      margin: 0 20px 30px;
+    }
+    .modal-body{
+      .text-wrap {
+        margin: 0 20px 30px;
+      }
+    }
   }
 }
 @media(max-width:479px){

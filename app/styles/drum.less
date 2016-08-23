@@ -72,51 +72,11 @@
     }
   }
   &.box-link{
-    .box-content{
-      padding: 20px 60px;
-      position: relative;
-    }
-    h4.vice-title{
-      font-weight: normal;
-      color: rgba(43,43,43,.5);
-      margin-top: 90px;
-    }
     h3{
       color: #00a6f6;
-      margin-top: 10px;
-      font-size: 36px;
-    }
-    ul{
-      color: rgba(43,43,43,.5);
-      padding-left: 0;
-      list-style: none;
-      margin-top: 85px;
-      font-size: 16px;
-      li{
-        line-height: 1.8;
-      }
-    }
-    p{
-      font-size: 14px;
-      margin-top: 88px;
-      width:90%;
-      color: #333;
     }
     a{
-      position: absolute;
-      right: 0;
-      bottom: 0;
       background-color:#00a6f6;
-      color: #fff;
-      font-size: 16px;
-      padding: 6px 12px; 
-      opacity: 0;
-    }
-    &:hover{
-      a{
-        transition: all  0.8s ease-in-out;
-        opacity: 1;
-      }
     }
   }
   &.box-8{
@@ -202,21 +162,12 @@
     }
   } 
 }
-@media(min-width: 768px){
-
-}
-@media(min-width:768px) and (max-width: 991px){
-  .box.box-instrument .center .content {
-    height: 2.5rem;
-    padding: 0;
-    h3{
-      font-size: 20px;
-    }
-  }
+@media(min-width:768px) and (max-width: 991px){ 
   .box.box-2{
     .center .content {
-      padding: 0 2.5em;
-      height: 18.5rem;
+      padding: 0 7.5em;
+      height: 9.5em;
+      font-size: 16px;
     }
   }
   
@@ -234,9 +185,6 @@
     .center .content {
       padding: 0 1.5em;
     }
-  }
-  .box.box-13{
-    margin-top: -187.5px;
   }
   .box.box-link{
     .box-content {
@@ -259,7 +207,15 @@
     }
   }
 }
-@media(min-width:480px) and (max-width: 767px){
+@media(min-width:480px) and (max-width:991px){
+  .box.box-5{
+    background-color: #0095dd!important;
+  }
+  .box.box-6{
+    background-color: #00a6f6!important;
+  }
+}
+@media(min-width:480px) and (max-width:767px){
   .box.box-3,.box.box-4,.box.box-5,.box.box-6{
     .box-content{
       padding: 30px;

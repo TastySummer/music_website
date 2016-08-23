@@ -110,8 +110,23 @@
     height: 600px;
   }
 }
-@media(min-width: 768px){
-
+@media(max-width:991px) and (min-width:768px){
+  .box.box-lg{
+    height: 375px;
+  }
+  .box.box-sm{
+    height: 187.5px;
+  }
+  .pull-up {
+    margin-top: -187.5px;
+    height: 187.5px!important;
+  }
+  .pics {
+    height: 187.5px!important;
+  }
+  .box.box-instrument .center .content h3 {
+    font-size: 24px;
+  } 
 }
 @media(min-width:768px) and (max-width: 991px){
   .background .content-wrapper {
