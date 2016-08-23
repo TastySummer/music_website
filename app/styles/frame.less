@@ -17,8 +17,11 @@ body {
     transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     webkit-transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     img{
-      opacity: 0.05;
+      opacity: 0.1;
       z-index: -1;
+      &.secondary_img{
+        opacity: 0.05;
+      }
     }
 }
 .box:hover{
@@ -30,12 +33,14 @@ body {
     // transform: translate(0, 0);
     opacity: 1;
   }
-  .box-hover-black{
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    .center .content{
-      text-align: left;
-    }
+}
+.box .box-hover-black{
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  .center .content{
+    text-align: left;
+    height: 7.5em;
+    padding: 0 4.5em;
   }
 }
 .box .box-content {
@@ -80,9 +85,13 @@ img{
   background-color:#18db4d;
   text-align: center;
   color: #fff;
+  .center .content {
+    height: 15.5em;
+  }
   h2{
       font-weight: normal;
       line-height: 1.4;
+      font-size: 46px;
   }
   a.btn{
     background-color: #fff;
@@ -92,7 +101,7 @@ img{
     color: #18cc3a;
     margin-top: 20px;
     font-size: 16px;
-    padding: 6px 20px;
+    padding: 7px 24px;
     z-index: 2;
     opacity: 0;
   }
@@ -167,6 +176,23 @@ img{
       transition: all  0.8s ease-in-out;
       opacity: 1;
     }
+  }
+}
+.box.box-class{
+  background-image: url(../images/index/zhinengjiaoshi.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .center .content {
+    height: 6.5rem;
+    text-align: center;
+    color: #fff;
+  }
+  h3{
+    font-size: 38px;
+  }
+  p{
+    font-size: 28px;
   }
 }
 .box .box-hover{
@@ -420,6 +446,17 @@ img{
   .box.box-instrument .center .content h3{
     font-size: 30px;
   }
+  .box.box-class{
+    .center .content {
+      height: 6.5rem;
+    }
+    h3{
+      font-size: 32px;
+    }
+    p{
+      font-size: 22px;
+    }
+  }
 }
 @media(max-width:991px) and (min-width:768px){
   .box.box-lg{
@@ -437,13 +474,26 @@ img{
   }
   .box .box-hover{
     p{
-      font-size: 14px;
+      font-size: 18px;
+    }
+    .center .content{
+      padding: 0 6.5em;
     }
   }
   .box.box-instrument .center .content {
     height: 2.5rem;
     padding: 0;
   }
+  // .box.box-class{
+  //   .center .content {
+  //   }
+  //   h3{
+  //     font-size: 28px;
+  //   }
+  //   p{
+  //     font-size: 18px;
+  //   }
+  // }
 }
 @media(max-width: 767px){
   .container{
@@ -471,6 +521,24 @@ img{
       }
     }
   }
+  .box.box-number {
+    .center .content{
+      height: 12.5em;
+    }
+    h2 {
+      font-size: 36px;
+    }
+  }
+  .box.box-class{
+    .center .content {
+    }
+    h3{
+      font-size: 28px;
+    }
+    p{
+      font-size: 18px;
+    }
+  }
 }
 @media(max-width:479px){
   .modal-dialog{
@@ -488,6 +556,28 @@ img{
       font-size: 20px;
     }
   }
+  .box .box-hover-black .center .content {
+    padding: 0 2.5em;
+  }
+  .box.box-number {
+    .center .content{
+      height: 12.5em;
+    }
+    h2 {
+      font-size: 36px;
+    }
+  }
+  .box.box-class{
+    .center .content{
+      height: 4.5em;
+    }
+    h3{
+      font-size: 24px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
 }
 
 @media(max-width:375px){
@@ -497,8 +587,15 @@ img{
   }
   .box .box-hover{
     .center .content {
+      height: 7.5em;
+    }
+  }
+  .box.box-number {
+    .center .content{
       height: 11.5em;
-      padding: 0 1.5em;
+    }
+    h2 {
+      font-size: 30px;
     }
   }
 }

@@ -24,10 +24,11 @@
   &.box-1{
     .center .content{
       text-align: left;
+      padding: 0 5.5em;
     }
     h1{
       margin-top: 0px;
-      font-size: 44px;
+      font-size: 60px;
       font-weight: 600;
       text-align: left;
     }
@@ -36,6 +37,7 @@
       margin-bottom: 25px;
       font-weight: normal;
       text-align: left;
+      font-size: 46px;
     }
     a{
         background-color: #18bd4d;
@@ -43,6 +45,8 @@
         border-radius: 20px;
         border: none;
         cursor: pointer;
+        padding: 10px 20px;
+        font-size: 16px;
     }
   }
   &.box-2{
@@ -91,25 +95,6 @@
       text-align: center;
       color: #fff;
       height: 5.5rem;
-    }
-  }
-  &.box-12{
-    background-color: #18cc3a;
-    text-align: center;
-    color: #fff;
-    h2{
-        font-weight: normal;
-        line-height: 1.4;
-    }
-    a.btn{
-      background-color: #fff;
-      border-radius: 20px;
-      border: none;
-      cursor: pointer;
-      color: #18cc3a;
-      margin-top: 20px;
-      font-size: 16px;
-      padding: 6px 20px;
     }
   }
   &.box-13{
@@ -259,6 +244,21 @@
 }
 
 @media(max-width: 479px){
+  .box.box-1 {
+    .center .content {
+      padding: 0 3.5em;
+    }
+    h1{
+      font-size: 36px;
+    }
+    h2.vice-title{
+      font-size: 24px;
+    }
+    a{
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
   .box.box-2 .center .content {
     padding: 0 1.5rem;
     line-height: 1.8;
