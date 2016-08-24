@@ -1,13 +1,13 @@
 header#navbar {
   margin-bottom: 0px;
-  //position: fixed;
+  position: fixed;
   z-index: 1000;
   width: 100%;
   top: 0;
   left: 0;
   .nav-mask {
     background-color: #f6f1eb;
-    height: 80px;
+    height: 120px;
     width: 0px;
     position: absolute;
     top: 0px;
@@ -40,9 +40,10 @@ header#navbar {
     width: 100%;
     list-style-type: none;
     z-index: 2;
+    background-color: #fff;
     li {
       position: relative;
-      margin-right: 15px;
+      //margin-right: 15px;
       > ul {
         display: none;
         margin: 0px;
@@ -56,16 +57,18 @@ header#navbar {
       }
       &.active,&:hover,&.current{
         a{
-          background-color: #fff;
-          color: #FFA727;
-          border: 1px solid #fff;
+          // background-color: #fff;
+          background-color: #000;
+          color: #fff;
+          //border: 1px solid #fff;
         }
       }
       a{
-        width: 94%;
+        width: 100%;
         padding-left: 6%;
-        color: #fff;
-        background-color: transparent;
+        //color: #FFA727;
+        color: #000;
+        // background-color: transparent;
         text-decoration: none;
         text-transform: uppercase;
         font: bold 2.33333333333333em/55px "Microsoft YaHei","Arial",sans-serif;
@@ -77,13 +80,13 @@ header#navbar {
         transition: all 0.3s ease-in-out;
       }
     }
-    &.nav-right{
-      li a{
-        background-color: transparent;
-        color: #fff;
-        border: 1px solid #fff;
-      }
-    }
+    // &.nav-right{
+    //   li a{
+    //     background-color: transparent;
+    //     color: #fff;
+    //     border: 1px solid #fff;
+    //   }
+    // }
   }
 }
 header .section {
@@ -101,21 +104,21 @@ header .section {
     position: relative;
   }
   header#navbar .menu {
-    height: 80px;
+    height: 120px;
     width: auto;
     padding: 0px;
     max-width: 100%;
     li {
       float: left;
-      line-height: 80px;
+      line-height: 120px;
       a {
-        width: auto;
-        padding: 0px 20px;
+        width: 120px;
+        padding: 0px;
         font-size: 11px;
-        line-height: 30px;
+        line-height: 120px;
         display: block;
-        border-radius: 30px;
-        margin-top: 30px;
+        text-align: center;
+        //margin-top: 30px;
       }
     }
     > li:hover ul {
@@ -155,10 +158,16 @@ header .section {
 }
 
 @media (max-width:480px){
-  header#navbar .menu{
+  header#navbar {
+    a.logo {
+      width: 80px;
+      height: 80px;
+    }
+    .menu{
       width: 100%;
       li a{
         font: bold 1.83333333em/35px "Microsoft YaHei", "Arial", sans-serif;
       }
+    }
   }
 }
