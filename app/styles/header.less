@@ -58,7 +58,7 @@ header#navbar {
       &.active,&:hover,&.current{
         a{
           // background-color: #fff;
-          background-color: #000;
+          background-color: #282828;
           color: #fff;
           //border: 1px solid #fff;
         }
@@ -67,7 +67,7 @@ header#navbar {
         width: 100%;
         padding-left: 6%;
         //color: #FFA727;
-        color: #000;
+        color: #282828;
         // background-color: transparent;
         text-decoration: none;
         text-transform: uppercase;
@@ -114,7 +114,7 @@ header .section {
       a {
         width: 120px;
         padding: 0px;
-        font-size: 11px;
+        font-size: 16px;
         line-height: 120px;
         display: block;
         text-align: center;
@@ -167,6 +167,16 @@ header .section {
       width: 100%;
       li a{
         font: bold 1.83333333em/35px "Microsoft YaHei", "Arial", sans-serif;
+      }
+      &.nav-left{
+        left: 0!important;
+        top: 80px!important;
+        display: none!important;
+        &.open{
+          left: 0!important;
+          top: 80px!important;
+          display: block!important;
+        }
       }
     }
   }

@@ -128,6 +128,11 @@ img{
       font-size: 36px;
     }
   }
+  &:hover{
+    transform:scale(1.05);
+    box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+    z-index: 21;
+  }
 }
 .box.box-link{
   .box-content{
@@ -183,6 +188,11 @@ img{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  &:hover{
+    transform:scale(1.05);
+    box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+    z-index: 21;
+  }
   .center .content {
     height: 6.5rem;
     text-align: center;
@@ -507,8 +517,14 @@ img{
     transform: scale(1);
     box-shadow: none;
   }
-  .box.box-instrument .center .content h3{
-    font-size: 32px;
+  .box.box-instrument {
+    .center .content h3{
+      font-size: 32px;
+    }
+    &:hover{
+      transform: scale(1);
+      box-shadow: none;
+    }
   }
   #myModal2 .modal-dialog .modal-content {
     .modal-header .title{
@@ -528,6 +544,9 @@ img{
     h2 {
       font-size: 36px;
     }
+    a.btn{
+      opacity: 1;
+    }
   }
   .box.box-class{
     .center .content {
@@ -538,6 +557,14 @@ img{
     p{
       font-size: 18px;
     }
+    &:hover{
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+
+  .box .box-hover-black{
+    display: none;
   }
 }
 @media(max-width:479px){
@@ -549,16 +576,20 @@ img{
       font-size: 14px;
     }
   } 
-  .box.box-instrument .center .content {
-    height: 2.5rem;
-    padding: 0;
-    h3{
-      font-size: 20px;
+  .box.box-instrument {
+    .center .content {
+      height: 2.5rem;
+      padding: 0;
+      h3{
+        font-size: 20px;
+      }
     }
+    
   }
-  .box .box-hover-black .center .content {
-    padding: 0 2.5em;
-  }
+  
+  // .box .box-hover-black .center .content {
+  //   padding: 0 2.5em;
+  // }
   .box.box-number {
     .center .content{
       height: 12.5em;
@@ -566,6 +597,7 @@ img{
     h2 {
       font-size: 36px;
     }
+    
   }
   .box.box-class{
     .center .content{
