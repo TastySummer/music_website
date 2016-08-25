@@ -1,6 +1,7 @@
 header#navbar {
   margin-bottom: 0px;
-  position: fixed;
+  // position: fixed;
+  position: relative;
   z-index: 1000;
   width: 100%;
   top: 0;
@@ -9,7 +10,8 @@ header#navbar {
     background-color: #f6f1eb;
     height: 120px;
     width: 0px;
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 100;
     left: 0;
@@ -32,7 +34,8 @@ header#navbar {
   }
   .menu {
     display: none;
-    position: absolute;
+    // position: absolute;
+    position: fixed;
     top: 80px;
     //left: 20px;
     margin: 0px;
@@ -58,8 +61,8 @@ header#navbar {
       &.active,&:hover,&.current{
         a{
           // background-color: #fff;
-          background-color: #282828;
-          color: #fff;
+          background-color: #aaa;
+          color: #333;
           //border: 1px solid #fff;
         }
       }
@@ -67,7 +70,7 @@ header#navbar {
         width: 100%;
         padding-left: 6%;
         //color: #FFA727;
-        color: #282828;
+        color: #333;
         // background-color: transparent;
         text-decoration: none;
         text-transform: uppercase;

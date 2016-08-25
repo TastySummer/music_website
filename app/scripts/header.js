@@ -1,4 +1,11 @@
 $(document).ready(function(){
+
+	/* nav-mask 宽度*/
+	var screenWidth = $(window).width();
+	var pageWidth = $('.wrapper .carousel').width();
+	$(".nav-mask").css("width", (screenWidth - pageWidth)/2);
+	var maskWidth = (screenWidth - pageWidth)/2;
+
 	/* 滚动时左侧导航栏的出现和消失 */
 	var beforescroll = 0;
 	$(window).scroll(function(){	
@@ -16,7 +23,7 @@ $(document).ready(function(){
 		 	} 
 		 	else if(scrollTop == 0){
 		  		$('header#navbar .menu.nav-left').stop().animate({
-					"left":"120px",
+					"left":120 + maskWidth + "px",
 					"top" : "0px"
 				}); 
 				$('header#navbar .menu.nav-left').css("display","block");
@@ -26,7 +33,7 @@ $(document).ready(function(){
 		if((480 < screenWidth) && (screenWidth<= 1024)){
 			if(scrollTop > beforescroll){
 		  		$('header#navbar .menu.nav-left').stop().animate({
-					"left":"120px",
+					"left":120 + maskWidth + "px",
 					"top" : "-300px"
 				},1000,function(){
 					$('header#navbar .menu.nav-left').css("display","none");
@@ -47,17 +54,13 @@ $(document).ready(function(){
 		// }
 	});
 
-	/* nav-mask 宽度*/
-	var screenWidth = $(window).width();
-	var pageWidth = $('.wrapper .carousel').width();
-	$(".nav-mask").css("width", (screenWidth - pageWidth)/2);
 
 	/* nav-left 位置*/
 	if(screenWidth > 1024){
-		$('header#navbar .menu.nav-left').css({"left":"120px","top":"0px","display":"block"});
+		$('header#navbar .menu.nav-left').css({"left":120 + maskWidth + "px","top":"0px","display":"block"});
 	}
 	if((480 < screenWidth) && (screenWidth <= 1024)){
-		$('header#navbar .menu.nav-left').css({"left":"120px","top":"-300px","display":"none"});
+		$('header#navbar .menu.nav-left').css({"left":120 + maskWidth + "px","top":"-300px","display":"none"});
 	}
 	// if(screenWidth <= 480){
 	// 	$('header#navbar .menu.nav-left').css({"left":"0px","top":"80px","display":"none"});
@@ -66,14 +69,14 @@ $(document).ready(function(){
 	$(".main.desktop .wrapper").mouseover(function(){
 		if(screenWidth > 1024){
 			$('header#navbar .menu.nav-left').stop().animate({
-				"left":"120px",
+				"left":120 + maskWidth + "px",
 				"top" : "0px"
 			});
 			$('header#navbar .menu.nav-left').css("display","block");
 		}
 		if((480 < screenWidth) && (screenWidth <= 1024)){
 		  	$('header#navbar .menu.nav-left').stop().animate({
-				"left":"120px",
+				"left":120 + maskWidth + "px",
 				"top" : "0px"
 			});
 			$('header#navbar .menu.nav-left').css("display","block");
@@ -97,7 +100,7 @@ $(document).ready(function(){
 		}
 		if((480 < screenWidth) && (screenWidth <= 1024)){
 		  	$('header#navbar .menu.nav-left').stop().animate({
-				"left":"120px",
+				"left":120 + maskWidth + "px",
 				"top" : "-300px"
 			},1000,function(){
 				$('header#navbar .menu.nav-left').css("display","none");
@@ -120,11 +123,12 @@ $(document).ready(function(){
 		var screenWidth = $(window).width();
 		var pageWidth = $('.wrapper .carousel').width();
 		$(".nav-mask").css("width", (screenWidth - pageWidth)/2);
+		var maskWidth = (screenWidth - pageWidth)/2;
 		if(screenWidth > 1024){
-			$('header#navbar .menu.nav-left').css({"left":"120px","top":"0px","display":"block"});
+			$('header#navbar .menu.nav-left').css({"left":120 + maskWidth + "px","top":"0px","display":"block"});
 		}
 		if((480 < screenWidth) && (screenWidth <= 1024)){
-			$('header#navbar .menu.nav-left').css({"left":"120px","top":"0px","display":"none"});
+			$('header#navbar .menu.nav-left').css({"left":120 + maskWidth + "px","top":"0px","display":"none"});
 		}
 
 		// if(screenWidth <= 480){
@@ -134,14 +138,14 @@ $(document).ready(function(){
 		$(".wrapper").mouseover(function(){
 			if(screenWidth > 1024){
 				$('header#navbar .menu.nav-left').stop().animate({
-					"left":"120px",
+					"left":120 + maskWidth + "px",
 					"top" : "0px"
 				});
 				$('header#navbar .menu.nav-left').css("display","block");
 			}
 			if((480 < screenWidth) && (screenWidth <= 1024)){
 			  	$('header#navbar .menu.nav-left').stop().animate({
-					"left":"120px",
+					"left":120 + maskWidth + "px",
 					"top" : "0px"
 				});
 				$('header#navbar .menu.nav-left').css("display","block");
@@ -158,7 +162,7 @@ $(document).ready(function(){
 			}
 			if((480 < screenWidth) && (screenWidth <= 1024)){
 			  	$('header#navbar .menu.nav-left').stop().animate({
-					"left":"120px",
+					"left":120 + maskWidth + "px",
 					"top" : "-300px"
 				},1000,function(){
 					$('header#navbar .menu.nav-left').css("display","none");
