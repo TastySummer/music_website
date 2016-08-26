@@ -9,7 +9,7 @@ $(document).ready(function(){
 			$('.box-9').css('margin-top',-boxLgHeight);
 		}
 		else{
-			$('.box.box-lg,.box.box-sm,.box-5 ,.box-6,.box-7,.box-8,.box-11,.box-13').removeAttr("style");
+			$('.box.box-lg,.box.box-sm,.box-7,.box-9').removeAttr("style");
 		}
 	}
 	getHeight();
