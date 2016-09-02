@@ -5,11 +5,13 @@ $(document).ready(function(){
 			var boxSmHeight = $(window).width() / 2;
 			$('.box.box-lg').css('height',boxLgHeight);
 			$('.box.box-sm').css('height',boxSmHeight);
-			$('.box-7').css('margin-top',boxSmHeight);
-			$('.box-9').css('margin-top',-boxLgHeight);
+			$('.box-5,.box-6').css('margin-top',boxLgHeight);
+			$('.box-10').css('margin-top',-boxSmHeight);
+			$('.box-14').css('margin-top',boxSmHeight);
+			$('.box-7,.box-8,.box-11,.box-15,.box-16').css('margin-top',-3/2*boxLgHeight);
 		}
 		else{
-			$('.box.box-lg,.box.box-sm,.box-7,.box-9').removeAttr("style");
+			$('.box.box-lg,.box.box-sm,.box-7,.box-9,.box-10').removeAttr("style");
 		}
 	}
 	getHeight();
