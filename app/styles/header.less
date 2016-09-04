@@ -165,20 +165,35 @@ header .section {
     a.logo {
       width: 80px;
       height: 80px;
+      z-index: 100;
     }
     .menu{
+      display: block;
       width: 100%;
       li a{
         font: bold 1.83333333em/35px "Microsoft YaHei", "Arial", sans-serif;
       }
       &.nav-left{
-        left: 0!important;
-        top: 80px!important;
-        display: none!important;
+        left: 0;
+        top: 80px;
+        height: 0px;
+        transition: height 0.2s ease-in-out;
+        li{
+          height: 0px;
+          a{
+            display: none;
+          }
+        }
         &.open{
-          left: 0!important;
-          top: 80px!important;
-          display: block!important;
+          left: 0;
+          top: 80px;
+          height: 180px;
+          li{
+            height: 60px;
+            a{
+              display: block;
+            }
+          }
         }
       }
     }
