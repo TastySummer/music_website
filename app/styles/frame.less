@@ -1,10 +1,14 @@
-  body {
+body {
     background: #f6f1eb; 
-    font-family: "Hiragino Sans GB",PingHei,"Helvetica Neue",Helvetica,Arial,Verdana,"Microsoft Yahei",sans-serif;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif !important;
     -webkit-font-smoothing: antialiased;
     font-weight: 400;
     font-size: 16px; 
+    //max-height: 999999px;
 }
+// body * { 
+//     max-height: 999999px;
+// } 
 ::selection {
   background:#FFA727; 
   color:#fff;
@@ -571,7 +575,7 @@ img{
     display: none;
   }
 }
-@media(max-width:479px){
+@media(max-width: 479px){
   .modal-dialog{
     width: 100%;
   }
@@ -585,10 +589,9 @@ img{
       height: 2.5rem;
       padding: 0;
       h3{
-        font-size: 28px;
+        font-size: 30px;
       }
     }
-    
   }
   
   // .box .box-hover-black .center .content {
@@ -608,15 +611,15 @@ img{
       height: 4.5em;
     }
     h3{
-      font-size: 24px;
+      font-size: 28px;
     }
     p{
-      font-size: 14px;
+      font-size: 18px;
     }
   }
 }
 
-@media(max-width:375px){
+@media(max-width: 375px){
   .modal-dialog .modal-content .modal-body img{
     width: 100%;
     height: auto;
@@ -631,15 +634,13 @@ img{
       height: 11.5em;
     }
     h2 {
-      font-size: 30px;
+      font-size: 40px;
+      margin-top: 0px;
     }
   }
-  .box.box-instrument {
-    .center .content {
-      h3{
-        font-size: 24px;
-      }
+  .box.box-instrument .center .content {
+    h3{
+      font-size: 28px;
     }
-    
   }
 }
