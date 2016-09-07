@@ -9,6 +9,9 @@ body {
 // body * { 
 //     max-height: 999999px;
 // } 
+a.btn{
+  transition:opacity 0.3s ease-in-out;
+}
 ::selection {
   background:#FFA727; 
   color:#fff;
@@ -570,10 +573,15 @@ img{
       box-shadow: none;
     }
   }
-
-  .box .box-hover-black{
-    display: none;
+  .box:hover .box-hover {
+      opacity: 0;
   }
+  .box.active .box-hover{
+    opacity: 1;
+  }
+  // .box .box-hover-black{
+  //   display: none;
+  // }
 }
 @media(max-width: 479px){
   .modal-dialog{

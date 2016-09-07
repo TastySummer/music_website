@@ -1,0 +1,327 @@
+.vice-background{
+	height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.teacher-bg{
+    background-color: #FFA727;
+    background-image: url(../images/teacher/teacher.png);
+  }
+}
+.box {
+  .item{       
+      height: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  &.br-teacher{
+  	background-color: #FFA727;
+  }
+  &.br-teacher-dark{
+    background-color: #e59623;
+  }
+  &.box-1{
+    .center .content{
+      // text-align: left;
+      padding: 0;
+      height: 12.5em;
+    }
+    h1{
+      margin-top: 0px;
+      font-size: 60px;
+      font-weight: 600;
+      text-transform: uppercase;
+      // text-align: left;
+    }
+    h2.vice-title{
+      margin-top: 0px;
+      margin-bottom: 50px;
+      font-weight: normal;
+      // text-align: left;
+      font-size: 46px;
+    }
+    a{
+      background-color: #18bd4d;
+      color: #fff;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      padding: 12px 30px;
+      font-size: 16px;
+      &:hover{
+        opacity: 0.8; 
+      }
+    }
+  }
+  &.box-2{
+    background-color: #f8f8f8;
+    .center .content{
+      padding: 0 6.5em;
+      line-height: 1.8;
+      text-align: left;
+    }
+  }
+  &.box-3,&.box-4,&.box-5,&.box-6{
+    text-align: center;
+    h3.title{
+      color: #fff;
+      margin-top: 0px;
+      font-weight: normal;
+    }
+    p{
+      margin-top: 30px;
+      color: #fff;
+      opacity: 0.8;
+      font-size: 14px;
+      text-align: left;
+    }
+    .box-content{
+      padding: 40px 55px;
+    }
+  }
+}
+
+.box:hover .box-hover-black{
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.qualification-part{
+  background-color: #fff;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .content-wrapper{
+    margin-top:60px;
+    margin-bottom: 30px;
+    position: relative;
+    min-height: 110px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    .icon{
+        width:80px;
+        display: inline-block;
+        position: absolute;
+        margin-top: 0px;
+        img{
+          position: relative;
+        }
+    }
+    .content-right{
+        margin-left: 85px;
+        h3.title{
+            margin-bottom: 10px;
+        }
+        .intro-text{
+            // max-width: 270px;
+            text-align: left;
+            margin-left: 0px;
+            color: rgba(43, 43, 43, 0.5);
+        }
+    }
+  }
+  a{
+    background-color: #18bd4d;
+    color: #fff;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 12px 30px;
+    font-size: 16px;
+    display: inline-block;
+    margin: auto;
+    &:hover{
+        opacity: 0.8;
+        color:#fff; 
+    }
+  }
+}
+@media(min-width:1200px){
+ 
+}
+@media(max-width:1199px){
+  .steps {
+    .content-wrapper{
+          .content-right{
+              h3.title{
+                  span.text{
+                    font-size: 18px;
+                  }
+              }
+          }
+      }
+  }
+}
+@media(min-width:992px) and (max-width: 1199px){
+  .box.box-2 .center .content {
+    padding: 0 4.5em;
+  }
+  .box.box-3,.box.box-4,.box.box-5,.box.box-6{
+    .box-content{
+      padding: 20px;
+    }
+  }
+}
+@media(min-width:768px) and (max-width: 991px){
+  .box.box-2{
+    .center .content {
+      padding: 0 7.5em;
+      height: 9.5em;
+      font-size: 16px;
+    }
+  }
+  
+  .box.box-3,.box.box-4,.box.box-5,.box.box-6{
+    .box-content{
+      padding: 20px;
+      h3{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      p{
+        margin-top: 0px;
+      }
+    }
+    .center .content {
+      padding: 0 1.5em;
+    }
+  }
+}
+@media(min-width:480px) and (max-width:991px){
+  .box.box-5{
+    background-color: #e59623!important;
+  }
+  .box.box-6{
+    background-color: #FFA727!important;
+  }
+}
+@media(max-width:767px){
+  .content-wrapper{
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    .content-right{
+      h3.title{
+        span.text {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media(min-width:480px) and (max-width: 767px){
+  .box.box-3,.box.box-4,.box.box-5,.box.box-6{
+    .box-content{
+      padding: 30px;
+      h3{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      p{
+        margin-top: 0px;
+        font-size: 15px;
+      }
+    }
+  }
+  .box.box-2 .center .content {
+     padding: 0px 2.5em; 
+  }
+}
+
+@media(max-width: 479px){
+  .vice-background {
+    height: 250px;
+  }
+  .box.box-1 {
+    .center .content {
+      padding: 0;
+      height: 9.5em;
+    }
+    h1{
+      font-size: 36px;
+    }
+    h2.vice-title{
+      font-size: 24px;
+    }
+    a{
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  // .box.box-2 .center .content {
+  //   padding: 0 1.5rem;
+  //   line-height: 1.8;
+  //   font-size: 14px;
+  // }
+  .box.box-2{
+    .center{
+      position: relative;
+      left: inherit;
+      right: inherit;
+      top: inherit;
+      bottom: inherit;
+    }
+    .center .content{
+      padding: 50px 30px;
+      height: auto;
+    }
+  }
+  .box.box-3,.box.box-4,.box.box-5,.box.box-6{
+    .box-content{
+      padding: 30px;
+      position: relative;
+      left: inherit;
+      right: inherit;
+      top: inherit;
+      bottom: inherit;
+      h3{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      p{
+        margin-top: 0px;
+      }
+    }
+    .center{
+      position: relative;
+      left: inherit;
+      right: inherit;
+      top: inherit;
+      bottom: inherit;
+    }
+    .center .content{
+      height: auto;
+      padding: 0;
+    }
+  }
+  .box .box-hover{
+    p{
+      font-size: 14px;
+    }
+  } 
+}
+
+@media(max-width: 375px){
+  .box.box-3,.box.box-4,.box.box-5,.box.box-6{
+    .box-content{
+      padding: 10px;
+      .center{
+        position: relative;
+      }
+      .center .content {
+        padding: 0px 1em;
+      }
+      h3{
+        margin-top: 10px;
+        font-size: 20px;
+      }
+      p{
+        margin-top: 0px;
+      }
+    }
+  }
+}

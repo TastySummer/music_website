@@ -6,6 +6,9 @@ $(document).ready(function(){
 	$(".nav-mask").css("width", (screenWidth - pageWidth)/2);
 	var maskWidth = (screenWidth - pageWidth)/2;
 
+	var pathName = window.location.pathname;
+	console.log(pathName);
+
 	/* 滚动时左侧导航栏的出现和消失 */
 	var beforescroll = 0;
 	$(window).scroll(function(){		
@@ -104,13 +107,34 @@ $(document).ready(function(){
 		}
 	});
 	$("nav .wrapper").mouseout(function(){
-		if(screenWidth > 1024){
-			$('header#navbar .menu.nav-left').stop().animate({
-				"left":"-500px",
-				"top" : "0px"
-			},1000,function(){
-				$('header#navbar .menu.nav-left').css("display","none");
-			});
+		var scrollTop = $(document).scrollTop();
+		if(pathName == "/index.html"){
+			if(screenWidth > 1024 && scrollTop == 0){
+				$('header#navbar .menu.nav-left').stop().animate({
+					"left":120 + maskWidth + "px",
+					"top" : "0px"
+				},1000,function(){
+					$('header#navbar .menu.nav-left').css("display","block");
+				});
+			}
+			if(screenWidth > 1024 && scrollTop > 0){
+				$('header#navbar .menu.nav-left').stop().animate({
+					"left":"-500px",
+					"top" : "0px"
+				},1000,function(){
+					$('header#navbar .menu.nav-left').css("display","none");
+				});
+			}
+		}
+		if(pathName != "/index.html"){
+			if(screenWidth > 1024){
+				$('header#navbar .menu.nav-left').stop().animate({
+					"left":"-500px",
+					"top" : "0px"
+				},1000,function(){
+					$('header#navbar .menu.nav-left').css("display","none");
+				});
+			}
 		}
 		if((480 < screenWidth) && (screenWidth <= 1024)){
 		  	$('header#navbar .menu.nav-left').stop().animate({

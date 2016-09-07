@@ -24,7 +24,14 @@ $(document).ready(function(){
 		}
 	}
 	getHeight();
+	$('.carousel').carousel();
+	
+	if($(window).width()<768){
+		$('.box-13').click(function(){
+			$('.box').toggleClass('active');
+		});
+	}
+	
 	$(window).resize(getHeight);
-
-	$('.carousel').carousel();	
+	
 });
