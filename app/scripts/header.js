@@ -202,6 +202,7 @@ $(document).ready(function(){
 			}
 		});
 		$("nav .wrapper").mouseout(function(){
+			var scrollTop = $(document).scrollTop();
 			if(pathName == "/index.html" || pathName == "/"){
 				if(screenWidth > 1024 && scrollTop == 0){
 					$('header#navbar .menu.nav-left').stop().animate({
