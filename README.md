@@ -21,3 +21,6 @@ oneapm-com
 
 [swig模板文档](http://paularmstrong.github.io/swig/)
 
+
+需要换 vendors 里面的 bootstrap.css，从根目录找其修改版本。
+
