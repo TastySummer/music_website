@@ -179,7 +179,7 @@ $(document).ready(function(){
 			$('header#navbar .menu.nav-left').css({"left":"0px","top":"80px","height":"0px"});
 		}
 
-		$(".wrapper").mouseover(function(){
+		$("nav .wrapper").mouseover(function(){
 			if(screenWidth > 1024){
 				$('header#navbar .menu.nav-left').stop().animate({
 					"left":120 + maskWidth + "px",

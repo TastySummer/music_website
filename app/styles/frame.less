@@ -1,3 +1,4 @@
+@import "lesshat";
 body {
     background: #f6f1eb; 
     font-family: "Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif !important;
@@ -363,6 +364,56 @@ img{
       }
     }
   }
+}
+/* ======= Modal ======= */
+.video-container iframe, video {
+    max-width: 100%;
+}
+.modal.modal-video .modal-dialog {
+  width: 760px;
+  margin-top: 90px;
+  .transform(scale(1, 0) rotate(90deg) skew(30deg, 20deg));
+  .transition(all 0.5s 0.3s);
+  &.active{
+    .transform(scale(1, 1) rotate(0deg) skew(0deg, 0deg));
+  }
+}
+
+.modal.modal-video .modal-body {
+  padding: 0;
+  padding-top: 0;
+}
+.modal.modal-video .modal-header {
+  border: none;
+  padding: 0;
+  position: relative;
+}
+.modal.modal-video .modal-content {
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.modal.modal-video button.close {
+  font-size: 36px;
+  font-weight: 300;
+  text-shadow: none;
+  color: #fff;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
+  background: none;
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+  z-index: 10;
+}
+.modal.modal-video button.close:hover {
+  color: #ec6952;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  opacity: 1;
 }
 #myModal2 .modal-backdrop.in {
   filter: alpha(opacity=80);
