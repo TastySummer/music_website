@@ -1,7 +1,17 @@
 $(document).ready(function() {
+
   var global = {
     videoId: null,
     stateOfVideo: 1
+  }
+
+  var is_weixin = function(){
+    var ua = navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i)=="micromessenger") {
+      return true;
+    } else {
+      return false;
+    }
   }
 
   //视频关闭控制
@@ -31,4 +41,10 @@ $(document).ready(function() {
       video.closest('.modal-dialog').addClass("active");
     }, 100);
   })
+
+  if (is_weixin()) {
+    $('.btn.weixin').show().prev('.btn').hide();
+  }
+
+
 });
