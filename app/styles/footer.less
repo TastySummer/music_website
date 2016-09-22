@@ -69,6 +69,7 @@
         }
     }
     .span3{
+        vertical-align: top;
         p{
             a{
                 font: bold 0.71428571428571em "Microsoft YaHei","Arial",sans-serif;
@@ -76,34 +77,60 @@
             }
         }
         .qr-wrapper{
+            background-color: #fff;
+            border-radius: 10px;
             .content{
+                padding: 20px;
                 .con-left{
-                    float: left;
-                    width: 50%;
+                    width: 48%;
+                    display: inline-block;
+                    vertical-align: top;
+                      p{
+                        color: #ffa000;
+                        margin-bottom: 10px;
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
                     ul{
                         li{
-                            color: #fff;
+                            .iconfont{
+                                font-size: 20px;
+                                vertical-align: middle;
+                            }
+                            span{
+                                padding-left: 5px;
+                                a{
+                                    color: #333;
+                                }
+                            }
                         }
                     }
                 }
                 .con-right{
-                    float: left;
+                    display: inline-block;
                     width: 50%;
                     img{
                         width: 150px;
+                        height: 150px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
                         position: relative;
                         top: inherit;
                         left: inherit;
-                        height: 150px;
                     }
                     p{
-                        font-size: 14px;
+                        font-size: 12px;
+                        color: #333;
+                        margin-bottom: 0px;
+                        text-align: center;
                     }
                 }
             }
         }
     }
     .span4 {
+        vertical-align: top;
         p {
             clear: both;
             a {
@@ -135,7 +162,7 @@
         overflow: visible;
         display: block;
         width: 100%;
-        min-height: 300px;
+        min-height: 260px;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -173,7 +200,6 @@
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
-    min-height: 300px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -184,12 +210,30 @@
     margin-left: 0;
   }
 }
-@media (max-width: 1199px) and (min-width: 980px){
+@media (max-width: 1199px) and (min-width: 992px){
+    .row-fluid .span4 {
+        width: 18%!important;
+    }
     .row-fluid .offset1 {
-      margin-left: 6.333%!important;
+      margin-left: 4.333%!important;
+    }
+    #footer .span3 .qr-wrapper{
+        .content{
+            padding: 15px;
+            .con-left{
+                width: 47%;
+
+            }
+            .con-right{
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
     }
 }
-@media (max-width: 979px) and (min-width: 768px){
+@media (max-width: 991px) and (min-width: 768px){
     .row-fluid {
         width: 100%;
     }
@@ -198,21 +242,45 @@
     }
 }
 
-@media (max-width:900px){
+@media (max-width:991px){
+    .row-fluid [class*="span"] {
+        min-height: auto;
+    }
     #footer .span4 {
-        width: 100% !important;
-        border-bottom: 1px solid #454545;
+        //width: 20% !important;
+        //border-bottom: 1px solid #454545;
         margin-bottom: 30px;
+        margin-left: 0px;
+        float: none;
+        display: inline-block;
         .studios {
             width: 50%;
         }
     }
-    #footer .span3 {
-        width: 50% !important;
-        margin: 0px !important;
+    #footer {
+        .span3 {
+            display: inline-block;
+            float: none;
+            &:nth-child(2){
+                //width: 80% !important;
+                width: 390px;
+                margin-left: 40px!important;
+                p{
+                    margin-top: 10px;
+                }
+            }
+            &:nth-child(3){
+                width: 100% !important;
+                width: auto;
+                margin: 0px !important;
+            }
+        }
     }
     .row-fluid [class*="span"] {
         float: left;
+    }
+    #footer .legal{
+        margin-top: 20px;
     }
 }
 @media (max-width: 767px){

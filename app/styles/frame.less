@@ -293,15 +293,41 @@ img{
   outline: none;
 }
 #myModal .modal-dialog{
-  width: 380px;
-  margin: 60px auto;
+  width: 280px;
+  margin: 100px auto;
   .modal-content{
     background-color: transparent;
     box-shadow: none;
     border: none;
     .modal-header{
       position: relative;
-      padding: 0;
+      background-color: transparent;
+      border-bottom: none;
+      h3{
+        color: #FFA727;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .icon-wrapper{
+        min-height: 60px;
+        p{
+          width: 33.3333%;
+          display: inline-block;
+          float: left;
+          text-align: center;
+          span{
+            color:#fff;
+            font-size: 12px;
+            display: block;
+          }
+        }
+        .iconfont{
+          font-size: 40px;
+          color: #fff;
+        }
+      }
       button.close {
         font-size: 36px;
         font-weight: 300;
@@ -322,11 +348,13 @@ img{
     }
     .modal-body{
       background-color: #fff;
+      border-radius: 8px;
+      margin-top: 25px;
       img{
-        width: 276px;
-        height: 276px;
+        width: 200px;
+        height: 200px;
         position: relative;
-        margin: 42px auto 5px;
+        margin: 20px auto 5px;
         display: block;
       }
       .sub_title{
