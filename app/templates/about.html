@@ -1,0 +1,69 @@
+{% extends 'base/_layout.html' %}
+
+{% block content %}
+<div class="wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="carousel1" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000">
+				    <div class="carousel-inner">
+				        <div class="active item">
+				        	<div class="background">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-lg-offset-0 col-md-offset-0 col-sm-offset-0">
+									<div class="content-wrapper">
+						               
+						            </div>
+					            </div>
+	            			</div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="box-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-12 col-xxs-12 col-md-offset-0 col-sm-offset-0 col-xs-12-offset-0 col-xxs-12-offset-0">
+				<div class="box box-lg box-square br-white box-1">
+			        <div class="item">
+			        	<div class="center">
+			        		<div class="center content">
+			        			<p>2016 年，北京玩兔思闻科技有限公司成立。</p>
+			        			<p>一支由教师、工程师、设计师、年轻人组成的团队。想用互联网技术和全新的商业模式为中国兴趣教育产业做点什么……</p>
+			        		</div>
+						</div>
+			        </div>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-12 col-xxs-12 col-md-offset-0 col-sm-offset-0 col-xs-12-offset-0 col-xxs-12-offset-0">
+				<div class="box box-lg box-square box-2">
+			        <div class="item">
+			        	<div class="center">
+			        		<div class="center content">
+			        			<p>媒体联络：123@12swing.com</p>
+			        			<p>简历投递：123@12swing.com</p>
+			        		</div>
+						</div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	{% block modal %}
+	    {% include "base/_modal.html" %}
+	{% endblock %}
+	
+{% endblock %}
+
+{% block scripts %}
+    {% parent %}
+    <!-- build:js /scripts/about.js -->
+    <script type="text/javascript" src="/scripts/about.js"></script>
+    <!-- endbuild -->
+{% endblock %}
+		

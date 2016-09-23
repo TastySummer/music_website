@@ -1,0 +1,113 @@
+.background{
+  height: 660px;
+  background-color: rgb(204, 204, 204);
+  padding: 100px 0px;
+  background-image: url(../images/art/banner.png);
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .content-wrapper{
+    padding-top: 100px;
+    margin-left: 150px;
+    h1.title{
+      margin-top: 110px;
+      font-size: 48px;
+      font-weight: 400;
+    }
+    h3.title{
+      margin-top: 25px;
+      font-weight: 400;
+      font-size: 48px;
+    }
+    p.btn-p{
+      margin-top: 35px;
+      a{
+        background-color: #18db4d;
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+.box {
+  .item{       
+      height: 100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  }
+  .center .content{
+    padding: 0 6.5em;
+    line-height: 1.8;
+  }
+  &.box-1{
+    background-color: #fff;
+    .center .content{
+      height: 8em;
+      text-align: left;
+    }
+  }
+  &.box-2{
+    background-color: #f8f8f8;
+    .center .content{
+      height: 4em;
+      text-align: center;
+    }
+  }
+}
+@media(min-width:992px) and (max-width: 1199px){
+  .box .center .content {
+    padding: 0 4.5em;
+  }
+}
+@media(min-width:768px) and (max-width: 991px){ 
+  .box.box-1{
+    .center .content {
+      padding: 0 3.5em;
+      height: 11em;
+      font-size: 16px;
+    }
+  }
+  .box.box-2{
+    .center .content {
+      padding: 0 3.5em;
+      height: 4.5em;
+      font-size: 16px;
+    }
+  }
+  .box.box-lg {
+      height: 375px;
+  }
+}
+@media(min-width:480px) and (max-width:767px){
+  .box.box-2 .center .content {
+     padding: 0px 2.5em; 
+  }
+}
+
+@media(max-width: 479px){
+  .box.box-2,.box.box-1{
+    .center{
+      position: relative;
+      left: inherit;
+      right: inherit;
+      top: inherit;
+      bottom: inherit;
+    }
+    .center .content{
+      padding: 50px 30px;
+      height: auto;
+    }
+  }
+  .box .box-hover{
+    p{
+      font-size: 14px;
+    }
+  } 
+}
+
+@media(max-width: 375px){
+}
