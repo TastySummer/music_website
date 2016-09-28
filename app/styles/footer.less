@@ -2,7 +2,7 @@
     background-color: #282828;
     border: 0px;
     margin: 0px;
-    padding: 5% 8.333% 10px;
+    padding: 30px 8.333% 10px;
     z-index: 19;
     position: relative;
     margin-bottom: 20px;
@@ -15,6 +15,7 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+        margin-top: 50px;
     }
     p {
         color: #FFF;
@@ -134,6 +135,8 @@
             }
         }
         &:nth-child(2){
+            margin-top: 60px;
+            min-height: auto;
             p{
                 opacity: 0.4;
             }
@@ -221,25 +224,37 @@
   }
 }
 @media (max-width: 1199px) and (min-width: 992px){
+    #footer .logo {
+        margin-top: 40px;
+    }
     .row-fluid .span4 {
         width: 18%!important;
     }
     .row-fluid .offset1 {
       margin-left: 4.333%!important;
     }
-    #footer .span3 .qr-wrapper{
-        .content{
-            padding: 15px;
-            .con-left{
-                width: 47%;
+    #footer .studios li {
+        width: 30%;
+        min-width: 66px;
+    }
+    #footer .span3 {
+        .qr-wrapper{
+            .content{
+                padding: 15px;
+                .con-left{
+                    width: 47%;
 
-            }
-            .con-right{
-                img{
-                    width: 100%;
-                    height: auto;
+                }
+                .con-right{
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
                 }
             }
+        }
+        &:nth-child(2) {
+            margin-top: 50px;
         }
     }
 }
@@ -255,6 +270,9 @@
 @media (max-width:991px){
     .row-fluid [class*="span"] {
         min-height: auto;
+    }
+    #footer .logo {
+        margin-top: 0px;
     }
     #footer .span4 {
         //width: 20% !important;
@@ -273,6 +291,7 @@
             float: none;
             &:nth-child(2){
                 //width: 80% !important;
+                margin-top: 0px;
                 margin-left: 40px!important;
                 p{
                     margin-top: 10px;
