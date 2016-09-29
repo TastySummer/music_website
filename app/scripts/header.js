@@ -6,6 +6,7 @@ $(document).ready(function(){
 	$(".nav-mask").css("width", (screenWidth - pageWidth)/2);
 	var maskWidth = (screenWidth - pageWidth)/2;
 	var pathName = window.location.pathname;
+	var navState;
 	// console.log(pathName);
 
 	/* 滚动时左侧导航栏的出现和消失 */
@@ -132,9 +133,20 @@ $(document).ready(function(){
 			});
 		}
 	});
-	$("header#navbar a.logo").click(function(){
+	$("header#navbar a.logo").click(function(event){
+		event.stopPropagation();
 		if(screenWidth <= 480){
-		 	$('header#navbar .menu.nav-left').stop().slideToggle();
+		 	$('header#navbar .menu.nav-left').stop().slideToggle(function(){
+		 		navState = $('header#navbar .menu.nav-left').css("display");
+		 	});
+		}
+	});
+	$("body").click(function(){
+		if(screenWidth <= 480){
+			if ( navState == 'block' ){
+				$('header#navbar .menu.nav-left').stop().slideUp();
+
+			}
 		}
 	});
 	$(window).resize(function(){

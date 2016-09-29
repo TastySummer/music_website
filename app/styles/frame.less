@@ -170,6 +170,7 @@ img{
   h3{
     margin-top: 10px;
     font-size: 36px;
+    font-weight: 600;
   }
   ul{
     color: rgba(43,43,43,.5);
@@ -194,17 +195,18 @@ img{
     color: #fff;
     font-size: 16px;
     padding: 6px 12px; 
-    opacity: 0;
+    //opacity: 0;
+    opacity: 1;
     &:hover{
       text-decoration: none;
     }
   }
-  &:hover{
-    a{
-      transition: all  0.8s ease-in-out;
-      opacity: 1;
-    }
-  }
+  // &:hover{
+  //   a{
+  //     transition: all  0.8s ease-in-out;
+  //     opacity: 1;
+  //   }
+  // }
 }
 .box.box-class{
   background-image: url(../images/index/zhinengjiaoshi.png);
@@ -304,8 +306,15 @@ img{
   outline: none;
 }
 #myModal .modal-dialog{
-  width: 280px;
-  margin: 100px auto;
+  width: 220px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  display: block;
   .modal-content{
     background-color: transparent;
     box-shadow: none;
@@ -316,10 +325,11 @@ img{
       border-bottom: none;
       h3{
         color: #FFA727;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 600;
         text-align: center;
         margin-bottom: 30px;
+        margin-top: 0px;
       }
       .icon-wrapper{
         min-height: 60px;
@@ -362,10 +372,10 @@ img{
       border-radius: 8px;
       margin-top: 25px;
       img{
-        width: 200px;
-        height: 200px;
+        width: 180px;
+        height: 180px;
         position: relative;
-        margin: 20px auto 5px;
+        margin: 5px auto;
         display: block;
       }
       .sub_title{
@@ -720,6 +730,15 @@ img{
     }
     p{
       font-size: 18px;
+    }
+  }
+  .box.box-link{
+    h4.vice-title {
+      margin-bottom: 0px;
+    }
+    h3{
+      margin-top: 5px;
+      margin-bottom: 15px;
     }
   }
 }

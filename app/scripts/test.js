@@ -19,12 +19,16 @@ $(document).ready(function(){
 	getHeight();
 
 	if ($(window).width() < 480) {
-		$("#carousel2").carousel('pause');
-		$("#carousel2 .item:nth-child(1)").addClass("active");
-		$("#carousel2 .item:nth-child(1)").siblings(".item").removeClass("active");
+		setTimeout(function(){
+			$("#carousel2").carousel('pause');
+			$("#carousel2 .item:nth-child(1)").addClass("active");
+			$("#carousel2 .item:nth-child(1)").siblings(".item").removeClass("active");
+		},1000);
+		
 	}
 	else{
 		$("#carousel2").carousel('cycle');
+
 	}
 
 	$(window).resize(function(){
