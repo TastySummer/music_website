@@ -23,7 +23,7 @@
 			        		<div class="center content">
 			        			<h1>teacher</h1>
 			        			<h2 class="vice-title">教师</h2>
-			        			<a href="" class="btn">报名成为教师</a>
+			        			<a href="javascript:;" class="btn scroll-down">报名成为教师</a>
 			        		</div>
 			        		<img src="images/teacher/teacher.svg">
 						</div>
@@ -145,11 +145,14 @@
                 </div>
 			</div>
 			<p class="text-center">
-				<a href="" class="btn">查看职位要求</a>
+				<a href="#" class="btn" data-toggle="modal" data-target="#myModal2">查看职位要求</a>
 			</p>
 		</div>
 	</div>
 </div>
+	{% block modal %}
+	    {% include "base/_modal.html" %}
+	{% endblock %}
 
 {% endblock %}
 

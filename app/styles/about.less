@@ -1,34 +1,33 @@
 .background{
   height: 550px;
   background-color: rgb(204, 204, 204);
-  padding: 100px 0px;
-  background-image: url(../images/about/about.png);
+  padding: 100px 15px 0px;
+  background-image: url(../images/about/about.jpg);
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
   .content-wrapper{
     padding-top: 100px;
-    margin-left: 150px;
+    text-align: center;
     h1.title{
-      margin-top: 110px;
-      font-size: 48px;
+      margin-top: 50px;
+      font-size: 44px;
       font-weight: 400;
+      color: #fff;
     }
-    h3.title{
-      margin-top: 25px;
+    h3{
+      margin-top: 100px;
+      margin-bottom: 14px;
       font-weight: 400;
-      font-size: 48px;
+      font-size: 20px;
+      color: #fff;
     }
-    p.btn-p{
-      margin-top: 35px;
-      a{
-        background-color: #18db4d;
-        color: #fff;
-        border-radius: 20px;
-        border: none;
-        font-size: 16px;
-        padding: 10px 20px;
-      }
+    p{
+      //margin-top: 35px;
+      color: #fff;
+      font-size: 12px;
+      margin-bottom: 5px;
+      line-height: 1.8;
     }
   }
 }
@@ -88,6 +87,11 @@
       height: 375px;
   }
 }
+@media(max-width:767px){
+  .background .content-wrapper h1.title {
+    font-size: 44px;
+  }
+}
 @media(min-width:480px) and (max-width:767px){
   .box.box-2 .center .content {
      padding: 0px 7.5em; 
@@ -95,6 +99,16 @@
 }
 
 @media(max-width: 479px){
+  .background {
+    .content-wrapper {
+      h1.title {
+        font-size: 34px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
   .box.box-2,.box.box-1{
     .center{
       position: relative;
@@ -116,6 +130,20 @@
 }
 
 @media(max-width: 375px){
+  .background {
+    .content-wrapper {
+      h1.title {
+        font-size: 29px;
+      }
+      h3{
+        font-size: 16px;
+        margin-top: 120px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
   .box{
     p{
       font-size: 14px;

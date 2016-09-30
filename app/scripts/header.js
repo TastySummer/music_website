@@ -141,6 +141,7 @@ $(document).ready(function(){
 		 	});
 		}
 	});
+	$("body > *").on("click", function(){});
 	$("body").click(function(){
 		if(screenWidth <= 480){
 			if ( navState == 'block' ){

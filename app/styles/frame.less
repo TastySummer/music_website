@@ -9,7 +9,10 @@ body {
 }
 // body * { 
 //     max-height: 999999px;
-// } 
+// }
+.btn:hover, .btn:focus, .btn.focus ,.btn:active{
+    outline: none;
+} 
 a.btn{
   transition:opacity 0.3s ease-in-out;
 }
@@ -163,9 +166,10 @@ img{
     position: relative;
   }
   h4.vice-title{
-    font-weight: normal;
-    color: rgba(43,43,43,.5);
+    font-weight: 600;
+    //color: rgba(43,43,43,.5);
     margin-top: 90px;
+    font-size: 17px;
   }
   h3{
     margin-top: 10px;
@@ -310,6 +314,7 @@ img{
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -30px;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -412,6 +417,13 @@ img{
         }
       }
     }
+  }
+}
+
+/* ======= Carousel ======= */
+.carousel-control{
+  &.left,&.right{
+    background: none;
   }
 }
 /* ======= Modal ======= */

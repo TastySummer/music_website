@@ -18,9 +18,11 @@ $(document).ready(function(){
 			var boxSmHeight = $(window).width() / 2;
 			$('.box.box-lg').css('height',boxLgHeight);
 			$('.box.box-sm').css('height',boxSmHeight);
+			$('.box.box-12').css('margin-top',boxSmHeight);
+			$('.box.box-14').css('margin-top',-5*boxSmHeight);
 		}
 		else{
-			$('.box.box-lg,.box.box-sm,.box-5 ,.box-6,.box-7,.box-8,.box-11,.box-13').removeAttr("style");
+			$('.box.box-lg,.box.box-sm,.box-12,.box-14').removeAttr("style");
 		}
 	}
 	getHeight();

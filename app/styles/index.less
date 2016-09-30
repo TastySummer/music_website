@@ -41,10 +41,22 @@
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         color: #fff;
+        .center .content{
+          padding: 0 4.5em;
+        }
       } 
     }
     .carousel-control {
       z-index: 2;
+      transition: opacity 0.3s ease-in-out;
+      .iconfont{
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -30px;
+        margin-left: -20px;
+      }
     }
   }
   .carousel, .carousel-inner, .carousel-inner .item {
@@ -106,7 +118,18 @@
   background-position-x:0%;
   background-size: cover;
   background-repeat: no-repeat;
-}  
+} 
+@media(min-width:1200px){
+  .box.box-1{
+    h3{
+      font-size:  30px;
+    }
+    .center .content{
+      font-size: 16px;
+      padding: 0 5.5em!important;
+    }
+  }
+} 
 @media(min-width:992px) and (max-width: 1199px){
   .background {
     height: 600px;
@@ -207,19 +230,21 @@
     }
     .center .content {
        font-size: 18px;
+       padding: 0 3.5em!important;
     }
   }
   .background {
     height: 500px;
     .content-wrapper {
       margin-left: 10%;
-      padding-top: 140px;
+      padding-top: 180px;
       h1.title {
         font-size: 34px;
         margin-top: 75px;
       }
       h3.title {
         font-size: 34px;
+        margin-top: 15px;
       }
       a{
         padding: 6px 12px;
@@ -229,5 +254,9 @@
 }
 
 @media(max-width: 375px){
-
+  .box.box-1{
+    .center .content {
+       padding: 0 2.5em!important;
+    }
+  }
 }

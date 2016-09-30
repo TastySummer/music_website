@@ -46,5 +46,12 @@ $(document).ready(function() {
     $('.btn.weixin').show().prev('.btn').hide();
   }
 
+  
 
+  //点击footer logo返回顶部
+  $('#footer .logo').click(function() {
+    $('body,html').animate({
+        scrollTop: 0
+      }, 600);
+  });
 });
