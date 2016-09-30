@@ -305,9 +305,13 @@ img{
 }
 .title-sec{
   background-color: #f8f8f8;
+  opacity: 0.6;
 }
 .btn:focus{
   outline: none;
+}
+.modal-dialog{
+  margin: inherit;
 }
 #myModal .modal-dialog{
   width: 220px;
@@ -476,62 +480,65 @@ img{
   -moz-opacity: 1;
   opacity: 1;
 }
-#myModal2 .modal-backdrop.in {
-  filter: alpha(opacity=80);
-  opacity: 0.8;
-}
-#myModal2 .modal-dialog{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 560px;
-  overflow: auto;
-  display: block;
-  .modal-content{
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    color: #fff;
-    .modal-header{
-      border-bottom: none;
-      .title {
-        font-size: 32px;
-        margin: 0 20px 40px;
-        text-align: center;
-      }
-    }
-    .modal-body{
-      .text-wrap {
-        margin: 0 20px 50px;
-        font-size: 14px;
-         .note {
-          font-size: 12px;
-          padding-left: 1em;
-          text-indent: -1em;
+#myModal2,#myModalSax,#myModalPer{
+  .modal-backdrop.in {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+  }
+  .modal-dialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 420px;
+    overflow: auto;
+    display: block;
+    .modal-content{
+      background-color: transparent;
+      box-shadow: none;
+      border: none;
+      color: #fff;
+      .modal-header{
+        border-bottom: none;
+        .title {
+          font-size: 32px;
+          margin: 0 20px 40px;
+          text-align: center;
         }
       }
-      .close {
-        display: block;
-        width: 80px;
-        margin: 0 auto;
-        text-align: center;
-        color: white;
-        font-size: 14px;
-        line-height: 140%;
-        font-size: 36px;
-        opacity: 1;
-        float: inherit;
-        &:focus{
-          outline: none;
+      .modal-body{
+        .text-wrap {
+          margin: 0 20px 50px;
+          font-size: 14px;
+           .note {
+            font-size: 12px;
+            padding-left: 1em;
+            text-indent: -1em;
+          }
+        }
+        .close {
+          display: block;
+          width: 80px;
+          margin: 0 auto;
+          text-align: center;
+          color: white;
+          font-size: 14px;
+          line-height: 140%;
+          font-size: 36px;
+          opacity: 1;
+          float: inherit;
+          &:focus{
+            outline: none;
+          }
         }
       }
     }
   }
 }
+
 .web_wechat_login_phone_icon {
     background: url(../images/sprite.png) 0 -1135px;
     width: 32px;

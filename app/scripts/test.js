@@ -5,16 +5,14 @@ $(document).ready(function(){
 			var boxSmHeight = $(window).width() / 2;
 			$('.box.box-lg').css('height',boxLgHeight);
 			$('.box.box-sm').css('height',boxSmHeight);
-			$('.box-4').css('margin-top',5*boxSmHeight);
-			$('.box-5,.box-6').css('margin-top',-6*boxSmHeight);
-			$('.box-10').css('margin-top',-7*boxSmHeight);
-			$('.box-7,.box-8').css('margin-top',-7*boxSmHeight);
-			$('.box-14').css('margin-top',-3*boxSmHeight);
-			$('.box-11,.box-15,.box-16').css('margin-top',-4*boxSmHeight);
-			$('.box-12,.box-13').css('margin-top',-5*boxSmHeight);
+			$('.box-5,.box-6').css('margin-top',boxSmHeight);
+			$('.box-10').css('margin-top',-boxSmHeight);
+			$('.box-7,.box-8').css('margin-top',-boxLgHeight);
+			$('.box-14').css('margin-top',boxSmHeight);
+			$('.box-11,.box-15,.box-16').css('margin-top',-3/2*boxLgHeight);
 		}
 		else{
-			$('.box.box-lg,.box.box-sm,.box-4,.box-5,.box-6,.box-7,.box-8,.box-10,.box-11,.box-12,.box-13,.box-14,.box-15,.box-16').removeAttr("style");
+			$('.box.box-lg,.box.box-sm,.box-7,.box-9,.box-10').removeAttr("style");
 		}
 	}
 
