@@ -234,6 +234,17 @@ img{
     font-size: 28px;
   }
 }
+.box.box-trolls{
+  background-image: url(../images/index/trolls.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &:hover{
+    transform:scale(1.05);
+    box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+    z-index: 21;
+  }
+}
 .box .box-hover{
   position: relative;
   width: 100%;
@@ -695,6 +706,12 @@ img{
     p{
       font-size: 18px;
     }
+    &:hover{
+      transform: scale(1);
+      box-shadow: none;
+    }
+  }
+  .box.box-trolls{
     &:hover{
       transform: scale(1);
       box-shadow: none;
