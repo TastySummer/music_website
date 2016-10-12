@@ -133,6 +133,12 @@
 
           ga('create', 'UA-83957352-1', 'auto');
           ga('send', 'pageview');
+          $(document).ready(function(){
+            var gaArr = ['点击登录/注册按钮','点击马上预约按钮'];
+            $('.ga').click(function(){
+              ga('send', 'event', 'button', 'click', gaArr[$(this).attr("data")]);
+            });
+          })
 
         </script>
     {% endif %}
