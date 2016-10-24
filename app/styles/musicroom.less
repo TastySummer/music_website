@@ -9,7 +9,7 @@
   background-position: center;
   &.teacher-bg{
     background-color: #FFA727;
-    background-image: url(../images/teacher/bg.png);
+    background-image: url(../images/classroom/banner.png);
   }
 }
 .box {
@@ -56,6 +56,9 @@
       &:hover{
         opacity: 0.8; 
       }
+    }
+    img{
+      opacity: 1;
     }
   }
   &.box-2{
@@ -114,20 +117,15 @@
     margin-bottom: 30px;
     position: relative;
     min-height: 110px;
-    max-width: 325px;
+    max-width: 390px;
     margin-left: auto;
     margin-right: auto;
-    .icon{
-        width:80px;
-        display: inline-block;
-        position: absolute;
-        margin-top: 0px;
-        img{
-          position: relative;
-        }
+    img{
+      position: relative;
+      height: inherit;
     }
     .content-right{
-        margin-left: 100px;
+        width: 100%;
         h3.title{
             margin-bottom: 10px;
         }
@@ -170,6 +168,9 @@
           }
       }
   }
+  .qualification-part .content-wrapper {
+    max-width: 325px;
+  }
 }
 @media(min-width:992px) and (max-width: 1199px){
   .box.box-2 .center .content {
@@ -178,6 +179,9 @@
   .box.box-3,.box.box-4,.box.box-5,.box.box-6{
     .box-content{
       padding: 20px;
+      .center .content{
+        padding: 0 1.5em;
+      }
     }
   }
 }
@@ -206,8 +210,21 @@
     }
     .center .content {
       padding: 0 4.5em;
+      height: 13.5em;
     }
   }
+  .box{
+    &.box-7,&.box-8,&.box-10,&.box-11,&.box-12,&.box-13,&.box-14{
+      height: 187.5px;
+    }
+  }
+  .box.box-9{
+    height: 375px;
+  }
+  .pull-up {
+    margin-top: -187.5px;
+    height: 187.5px!important;
+  } 
 }
 @media(min-width:480px) and (max-width:991px){
   .box.box-5{
@@ -360,5 +377,11 @@
         margin-top: 0px;
       }
     }
+  }
+}
+@media(max-width:320px){
+  .qualification-part .content-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
