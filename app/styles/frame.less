@@ -7,6 +7,15 @@ body {
     font-size: 16px; 
     //max-height: 999999px;
 }
+
+.wechatshare{
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  .shareimg{
+    position: static;
+  }
+}
 // body * { 
 //     max-height: 999999px;
 // }
@@ -151,6 +160,17 @@ img{
 }
 .box.box-teacher{
     background-image: url(../images/teacher/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &:hover{
+      transform:scale(1.05);
+      box-shadow: 0 37.125px 70px -12.125px rgba(0,0,0,0.3);
+      z-index: 21;
+    }
+}
+.box.box-shop{
+    background-image: url(../images/index/shop.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -348,8 +368,8 @@ img{
         font-size: 24px;
         font-weight: 600;
         text-align: center;
-        margin-bottom: 30px;
-        margin-top: 0px;
+        margin-bottom: 15px;
+        margin-top: 20px;
       }
       .icon-wrapper{
         min-height: 60px;
@@ -358,6 +378,7 @@ img{
           display: inline-block;
           float: left;
           text-align: center;
+          margin-bottom: 0px;
           span{
             color:#fff;
             font-size: 12px;
@@ -390,7 +411,7 @@ img{
     .modal-body{
       background-color: #fff;
       border-radius: 8px;
-      margin-top: 25px;
+      margin-top: 20px;
       img{
         width: 180px;
         height: 180px;
@@ -429,6 +450,17 @@ img{
           font-size: 12px;
           color: #353535;
           margin: 0;
+        }
+      }
+      &.message{
+        background-color: transparent;
+        padding: 0px;
+        font-size: 14px;
+        color: #fff;
+        font-weight: bold;
+        ol{
+          padding-left: 20px;
+          line-height: 1.8;
         }
       }
     }

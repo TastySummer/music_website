@@ -22,7 +22,7 @@
 
     <title>{{pageTitle}}</title>
 
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/images/favicon.ico">
 
 
     {% block styles %}
@@ -77,8 +77,9 @@
         {% include "_browserUnhappy.html" %}
       {% endblock %}
     <![endif]-->
+    
     <div id="root">
-
+      <div class="wechatshare"><img  class="shareimg" src="/images/wechatshare.jpg"></div>
       {% block header %}
         {% include "_header.html" %}
       {% endblock %}

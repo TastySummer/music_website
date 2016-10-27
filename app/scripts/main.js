@@ -42,9 +42,9 @@ $(document).ready(function() {
     }, 100);
   })
 
-  if (is_weixin()) {
-    $('.btn.weixin').show().prev('.btn').hide();
-  }
+  // if (is_weixin()) {
+  //   $('.btn.weixin').show().prev('.btn').hide();
+  // }
 
   
 
